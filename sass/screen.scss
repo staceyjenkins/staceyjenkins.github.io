@@ -1,0 +1,109 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/reset";
+@import "compass/css3";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+html, body {background:$black;}
+
+.wrap {@include outer-container;
+       width:100%;
+       display:block;
+       @include clearfix;}
+
+header {position:fixed;
+        top:0;
+        left:0;
+        height:100px;
+        width:100%;
+        display:block;
+        z-index:100;
+        padding: 2em 3em 0 3em;
+      @include clearfix;
+
+      .contact_link, .menu{@include span-columns(1 of 2);}
+
+      .menu {text-align:right;}
+
+    }
+
+.menuscreen {position:fixed;
+             height:100vh;
+             background:$black;
+             width:100vw;
+             display:none;
+             z-index:200;
+             @extend %animation;
+
+            &.displaymenu {display:block;
+                           @extend %animation;}
+
+             .menublock{@include vertical-align;
+                        width:60%;
+                        margin-left:auto;
+                        margin-right:auto;}
+
+           }
+
+.menuscreen, section.intro {background:url("../img/bk.jpg") center;
+background-size:cover;}
+
+section {display:block;
+        position:relative;
+        text-align:center;
+        padding-bottom:rhythm(1);
+        width:100%;
+        height:100vh;
+        .wrap{@include vertical-align;}
+
+        ul.sociallinks{margin:0 auto;
+                         display:inline-block;
+                         position:relative;
+                         text-align:center;
+                        @include clearfix;
+          li {float:left;
+              padding-right:5px;
+              display:block;
+              &:last-child {padding-right:0;}
+            }
+          }
+
+          .full-width {@include fill-parent();
+                      height:100%;
+                      position:relative;
+                      @include clearfix;
+          .design, .illustration {display:block;
+          width:50%;
+          height:100vh;
+          float:left;
+          text-align:center;
+          @include clearfix;
+
+            .section-wrap {@include vertical-align;
+            position:relative;}
+
+          }
+          }
+
+          .design {background:$white;
+            display:block;
+              &:hover {background:url("../img/design_hover.jpg") center;
+              background-size:cover;
+            @include transition(opacity ease-out 0.5s);}
+          }
+          .illustration {background:$black;
+            &:hover {background:url("../img/illo_hover.jpg") center;
+            background-size:cover;
+          @include transition(opacity ease-out 0.5s);
+                         }
+        }
+      }

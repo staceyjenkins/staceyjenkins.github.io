@@ -1,0 +1,72 @@
+!!! 5
+html(class='no-js')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title
+
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='css/normalize.css')
+    link(rel='stylesheet', href='css/global.css')
+    script(src='js/vendor/modernizr-2.6.2.min.js')
+    //link(rel="stylesheet",href="http://basehold.it/24/ffffff")
+
+  body
+    //if lt IE 8
+      section.oldbrowser
+        .wrap 
+          p.chromeframe
+            You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a>
+            to improve your experience.
+  
+    section.intro
+      .wrap
+          h1 Stacey Jenkins
+          h2 Designer. Illustrator. Nerd.
+          p Hello! My name is Stacey, a Welsh person living and working in Reading, UK.
+          p By day, I work as an in-house designer and front-end web developer with over 6 years in my field. I believe that fantastic content should speak for itself, and that every element from image, type and even sound and music, is paramount.
+          p But by night, I am a digital illustrator, cartoonist and professional nerd, working under the alias 
+            strong
+              | froginajar.
+          a(class="button", href="http://design.staceyjenkins.co.uk", target="_blank") Download CV
+          
+    section.portfolios
+      .full-width
+          .design
+            .section-wrap
+              h3 Design
+              a(class="button", href="http://design.staceyjenkins.co.uk", target="_blank") View Portfolio
+              ul.sociallinks
+                li
+                  a(class="social", href="http://www.twitter.com/staceyjenkins", target="_blank") Twitter
+                li
+                  a(class="social", href="mailto:hello@staceyjenkins.co.uk", target="_blank") Send Email
+          .illustration
+            .section-wrap
+              .logo
+              h3 Illustration
+              a(class="button", href="http://illustration.staceyjenkins.co.uk", target="_blank") View Portfolio
+              ul.sociallinks
+                li
+                  a(class="social", href="http://www.twitter.com/froginajar", target="_blank") Twitter
+                li
+                  a(class="social", href="http://www.instagram.com/froginajar", target="_blank") Instagram
+                li
+                  a(class="social", href="mailto:hello@staceyjenkins.co.uk", target="_blank") Send Email
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    script(src='js/plugins.js')
+    script(src='js/main.js')
+
+    script
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
