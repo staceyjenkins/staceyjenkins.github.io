@@ -31,7 +31,7 @@ requirejs.config({
         fontawesome: 'https://use.fontawesome.com/2b8f3fa6eb',
         getTumblrArtwork:'lib/getTumblrArtwork.min',
         scrollbar: 'lib/jquery.nicescroll.min',
-        setanimations: 'lib/setanimations.min',
+        makeAnimations: 'lib/setanimations.min',
         owl: 'lib/owl.carousel.min',
         app: 'app'
     },
