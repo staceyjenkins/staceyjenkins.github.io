@@ -13,7 +13,7 @@ window.__ga__ = function() {
         }
     }
 };
-window.__ga__.q = [["create", "UA-XXXXXXXX-Y", "auto"]];
+window.__ga__.q = [["create", "UA-66418618-1", "auto"]];
 window.__ga__.l = Date.now();x
 
 requirejs.config({
