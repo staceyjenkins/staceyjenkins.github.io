@@ -6,6 +6,7 @@
 
 requirejs.config({
     baseUrl: 'js',
+    paths:{
         jquery:'lib/jquery.min',
         instaScript: 'lib/spectragram.min',
         waypoints:'lib/jquery.waypoints.min',
