@@ -6,7 +6,7 @@
 
 requirejs.config({
     baseUrl: 'js',
-    paths:{
+    paths: {
         jquery:'lib/jquery.min',
         instaScript: 'lib/spectragram.min',
         waypoints:'lib/jquery.waypoints.min',
@@ -15,10 +15,10 @@ requirejs.config({
         fontawesome: 'https://use.fontawesome.com/2b8f3fa6eb',
         getTumblrArtwork:'lib/getTumblrArtwork.min',
         scrollbar: 'lib/jquery.nicescroll.min',
-        makeAnimations: 'lib/setanimations.min',
+        makeanimations: 'lib/makeanimations.min',
         owl: 'lib/owl.carousel.min',
         app: 'app'
-    },
+    }
 });
 
 // Start loading the main app file. Put all of

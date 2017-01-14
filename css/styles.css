@@ -160,7 +160,17 @@ section, footer {
           height: 219px;
           background-repeat: no-repeat;
           background-position: center;
-          margin-bottom: 1em; }
+          margin-bottom: 1em;
+          position: relative; }
+          section.services ul.service-items li .icon a, footer.services ul.service-items li .icon a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0; }
+            section.services ul.service-items li .icon a span, footer.services ul.service-items li .icon a span {
+              display: none; }
         section.services ul.service-items li.design .icon, footer.services ul.service-items li.design .icon {
           background-image: url("../img/design.png"); }
         section.services ul.service-items li.digital .icon, footer.services ul.service-items li.digital .icon {
@@ -4552,7 +4562,7 @@ section.contact .contact-form .contact-info input, section.contact .contact-form
   font-family: 'Raleway', Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
   font-weight: 400;
   letter-spacing: 0.03em; }
-  section.contact .contact-form .contact-info input b, section.contact .contact-form .contact-info textarea b, section.contact .contact-form .contact-message input b, section.contact .contact-form .contact-message textarea b, footer.contact .contact-form .contact-info input b, footer.contact .contact-form .contact-info textarea b, footer.contact .contact-form .contact-message input b, footer.contact .contact-form .contact-message textarea b, a.button b, .contact-form input[type="submit"] b, h3 b, h4 b, .work-types li a b, body p b, section.contact .contact-form .contact-info input strong, section.contact .contact-form .contact-info textarea strong, section.contact .contact-form .contact-message input strong, section.contact .contact-form .contact-message textarea strong, footer.contact .contact-form .contact-info input strong, footer.contact .contact-form .contact-info textarea strong, footer.contact .contact-form .contact-message input strong, footer.contact .contact-form .contact-message textarea strong, button strong, .contact-form input[type="submit"] strong, h3 strong, h4 strong, .work-types li a strong, body p strong {
+  section.contact .contact-form .contact-info input b, section.contact .contact-form .contact-info textarea b, section.contact .contact-form .contact-message input b, section.contact .contact-form .contact-message textarea b, footer.contact .contact-form .contact-info input b, footer.contact .contact-form .contact-info textarea b, footer.contact .contact-form .contact-message input b, footer.contact .contact-form .contact-message textarea b, a.button b, .contact-form input[type="submit"] b, h3 b, h4 b, .work-types li a b, body p b, section.contact .contact-form .contact-info input strong, section.contact .contact-form .contact-info textarea strong, section.contact .contact-form .contact-message input strong, section.contact .contact-form .contact-message textarea strong, footer.contact .contact-form .contact-info input strong, footer.contact .contact-form .contact-info textarea strong, footer.contact .contact-form .contact-message input strong, footer.contact .contact-form .contact-message textarea strong, a.button strong, .contact-form input[type="submit"] strong, h3 strong, h4 strong, .work-types li a strong, body p strong {
     font-weight: 600; }
 
 h2, .contact p.email {
@@ -4620,8 +4630,15 @@ body p {
 h2 {
   text-align: center; }
 
-h2, h3 {
+h2, h3, h3 a {
   color: #f8db24; }
+
+h3 a {
+  text-decoration: none; }
+  h3 a:hover {
+    color: white;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
 
 .item-meta h4, .casestudy-info {
   color: #f8db24; }
@@ -4658,8 +4675,7 @@ a.button, .contact-form input[type="submit"] {
   margin-right: 1.69492%;
   -webkit-transition: all 0.25 ease-in-out;
   transition: all 0.25 ease-in-out;
-  outline: none; 
-    text-decoration: none;}
+  outline: none; }
   a.button:hover, .contact-form input[type="submit"]:hover {
     background: #29beb2;
     -webkit-transition: background 0.25 ease-in-out;
