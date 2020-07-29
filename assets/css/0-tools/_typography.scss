@@ -1,0 +1,775 @@
+/*TYPOGRAPHY*/
+// -------------------------------------------------- */
+
+//https://betterwebtype.com/articles/2018/10/15/rhythm-in-web-typography/
+// Variables
+$base-font-size: 18px; // Gets used as %
+$base-line-height: 30px;
+$rhythm-unit: 'rem';
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+@include establish-baseline();
+
+$bl: 1.5;
+
+
+
+$base: 16 * ($base-font-size / 100);
+$leading: $base * $bl;
+
+// Vertical rhythm mixins
+@mixin line-height($number){
+  line-height: #{$number * $leading + 'px'};
+  line-height: #{$number * $bl + 'rem'};
+}
+@mixin margin-top($number) {
+  margin-top: #{$number * $leading + 'px'};
+  margin-top: #{$number * $bl + 'rem'};
+}
+@mixin margin-bottom($number){
+ margin-bottom: #{$number * $leading + 'px'};
+  margin-bottom: #{$number * $bl + 'rem'};
+}
+
+/* http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/*/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+@mixin emSize($size) {
+  //font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+@function setSize($map, $object, $style){
+  @if map-has-key($map, $object){
+    @return map-get(map-get($map, $object), $style);
+  }
+}
+
+@mixin setTypeSize($size:s1){
+  
+  $sizes:(
+    s4:(
+    fontsize:120,
+    lines:4,
+    ),
+    s35:(
+    fontsize:48,
+    ),  
+    s3:(
+    fontsize:45,
+    lines:2,
+          ),
+    s2:(
+    fontsize:28,
+    lines:1,
+          ),
+    s15:(
+     fontsize:17,
+    lines:1,
+      ),
+    s1:(
+     fontsize:16,
+    lines:1,
+      ),
+    s0:(
+     fontsize:14,
+     lines:1,
+      ),
+    s12:(
+     fontsize:12,
+     lines:1,
+      ),
+          s10:(
+     fontsize:10,
+     lines:1,
+      ),
+  );
+  
+  
+  //2. Grab colour and its tone value from map
+  @if ($size != null) {
+    $fontsize: setSize($sizes, $size, fontsize) * 1px;
+    $lines: lines-for-font-size($fontsize);
+   //$bottommargin: setSize($sizes, $size, marginbottom);
+   //$lineheight: setSize($sizes, $size, lineheight);
+    @include adjust-font-size-to($fontsize);
+    @include adjust-leading-to($lines);  
+      
+  } @else {
+       $fontsize: setSize($sizes, s1, fontsize);
+          $lines: lines-for-font-size($fontsize);
+    @include adjust-font-size-to($fontsize);
+    @include adjust-leading-to($lines);  
+  }
+  };
+
+
+/*Declaring main heading and body copy families*/
+$primary: 'Open Sans', Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+$secondary: 'Abril Fatface', Georgia,Times,Times New Roman,serif;
+
+$fontFamilies:(
+ secondary:(font-family: $secondary, cap-height:0.7),
+  primary:(font-family:$primary, cap-height:0.63)
+);
+
+@mixin setTypeFace($typeface:'primary'){
+  font-family: getTypeface($typeface, 'font-family');
+};
+
+@function getTypeface($typeface, $typefacefeature:'font-family'){
+  @return unquote(map-get(map-get($fontFamilies, $typeface), $typefacefeature));
+};
+
+// -------------------------------------------------- */
+
+$standardmeasure: calc(1rem * #{$bl});
+
+
+/* TYPOGRAPHY RESET */
+html {
+  /* Change default typefaces here */
+    font-size: $base-font-size;
+    line-height:24px;
+    @include setTypeFace('primary');
+}
+
+/* Copy & Lists */
+p {
+  @include setTypeSize('s1');
+  color: colour(charcoal, 600);
+  text-align:left;
+  margin-top: rhythm(2);
+  margin-bottom: rhythm(5);
+  @include adjust-leading-to(6);
+}
+
+.lead + p {margin-top: rhythm(4);}
+h1 + p, h1 + ul, header + p {margin-top: rhythm(9); 
+        margin-bottom: rhythm(7);}
+h2 + p { margin-top: rhythm(4);
+         margin-bottom: rhythm(3);}
+h3 + p, h4 + p, h5 + p, h6 + p { margin-top: rhythm(4);
+         margin-bottom: rhythm(3);}
+
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */    
+  color: colour(blue, 700);
+}
+
+h1 {
+@include setTypeSize('s4');
+@include setTypeFace('secondary');
+margin-bottom: rhythm(3);
+}
+h2{
+@include setTypeSize('s3');
+@include setTypeFace('secondary');
+margin-bottom: rhythm(1); 
+}
+h3, h4, h5, h6 {
+@include setTypeSize('s2');
+@include setTypeFace('secondary');
+margin-bottom: rhythm(1);
+}
+
+
+
+/* Leading paragraph text */
+.lead {
+   margin-top: rhythm(3);
+    max-width:45ch;
+    text-align:center;
+    margin-left:auto;
+     margin-right:auto;
+    @include setTypeSize('s2');
+}
+
+.intro {@extend .lead;}
+
+ul,
+ol {
+  margin-top: rhythm(2) 0;
+ margin-bottom: rhythm(7);
+}
+ul li,
+ol li {
+  vertical-align: baseline;
+  @include setTypeSize('s1');
+  margin: rhythm(2) 0;
+  color: colour(charcoal, 600);
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+blockquote {
+  margin: rhythm(3) 0;
+  @include setTypeSize('s1');
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  padding: $standardmeasure;
+  flex-direction:column;
+  box-shadow:0px 10px 20px  transparentize(colour(charcoal,900), 0.80);
+  color: colour(charcoal, 600);
+  quotes: "\201C""\201D""\2018""\2019"; 
+}
+
+blockquote:before {
+  color: colour(charcoal, 200);
+  content: open-quote;
+  color: colour(charcoal, 600);
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/* Tables */
+table {
+  margin: rhythm(3) 0;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: calc(1.75rem/2);
+  @include setTypeSize('s1');
+}
+
+
+table td {color: colour(charcoal, 600);}
+table th {color:colour(blue,600);}
+/* Code blocks */
+code {
+  vertical-align: bottom;
+}
+
+/* Hug the block above you */
+.hug {
+  margin-top: 0;
+}
+
+p + figure, figure + figure {margin:4.5rem 0;}
+
+figure + p, h3 + figure {margin-top:4.5em;}
+
+figure + h3 {margin-top:2rem;}
+
+.intro + h3, .intro + h4, .intro + .infographic_masonry_grid {margin-top: calc(#{$standardmeasure} * 2);}
+
+p a, p a:visited {color:colour(teal,700);
+                 text-decoration: none !important;
+                 border-bottom: 0.08rem solid colour(charcoal,300);
+                 transition: border-color .15s ease-out;}
+p a:hover {color:colour(teal,900);
+           border-bottom: 0.0625rem solid colour(teal,900);}
+
+// -------------------------------------------------- */
+
+/*USEFUL MIXINS*/
+// -------------------------------------------------- */
+@mixin allCaps(){
+    text-transform:uppercase;
+    letter-spacing:0.10em;
+    font-weight:bold;
+    color:white;
+}
+
+@mixin mainhead(){
+    @include setTypeFace('secondary');
+    @include setTypeSize('s3');
+    text-shadow:0px 5px 10px 
+        transparentize(colour(charcoal,900), 0.80);
+     color:colour(blue, 700);
+}
+
+@mixin subhead(){
+    @include setTypeSize('s0');
+    @include setTypeFace('primary')
+    @include allCaps();
+    color:colour(teal, 500); 
+}
+
+@mixin subhead_large(){
+    @include setTypeSize('s1');
+    font-weight:600;
+    max-width:46ch;
+    @include for-size(tablet-landscape-up){
+    @include setTypeSize('s2');
+    font-weight:400;
+    max-width:32ch;
+    }
+    
+    @include setTypeFace('primary')
+    @include allCaps();
+    color:colour(teal, 500); 
+}
+
+@mixin button(){
+    @include setTypeFace('primary');
+    color: white;
+    font-weight: 700;
+    text-decoration:none;
+    display:inline-block;
+    min-width:80px;
+    cursor: pointer;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em .78571429em;
+    text-transform: none;
+    text-shadow: none;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    user-select: none;
+    transition: all .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+    will-change: '';
+    -webkit-tap-highlight-color: transparent;
+    background: colour(teal, 600);
+    box-shadow: 0px 2px 1px -1px transparentize(colour(charcoal, 500), 0.2),0px 1px 1px 0px transparentize(colour(charcoal, 500), 0.14),0px 1px 3px 0px transparentize(colour(charcoal, 500), .12);
+   
+    &:focus {outline:2px solid colour(charcoal,500);}
+    
+    &:hover {
+        background: colour(teal, 700);
+        transform: scale(1.1);
+        box-shadow: 0px 2px 8px -1px transparentize(colour(charcoal, 600), 0.2),0px 1px 1px 0px transparentize(colour(charcoal, 600), 0.14),0px 1px 3px 0px transparentize(colour(charcoal, 600), .12);
+    }
+    
+    &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+.button {@include button;}
+.contactme {@include button;
+            @include setTypeSize('s0');
+            margin-top:0 !important;}
+
+// -------------------------------------------------- */
+
+
+/*OVERRIDES*/
+// -------------------------------------------------- */
+
+/*homepage*/
+body.home {
+    .page_header {
+        color: colour(teal, 600);
+        margin-bottom: rhythm(3);
+        @include for-size(tablet-landscape-up){
+            text-align:left;
+        }
+    }
+    .page_lead {
+            @include setTypeSize(s1);
+            @include setTypeFace(primary);
+            @include adjust-leading-to(6);
+            text-align:center;
+            color:colour(blue,500);
+            margin-top: rhythm(2);
+            margin-bottom: rhythm(5);
+             
+        @include for-size(header_breakpoint){
+            @include setTypeSize(s2);
+            text-align:left;
+            color:colour(blue,300);
+            margin-top: rhythm(3);
+        }
+        
+        }
+    .work_header, .blog_header {
+        margin-bottom: rhythm(4);
+        padding:0;
+}
+    .client_header{
+        font-weight:600;
+        text-align:center;
+        @include setTypeSize('s1');
+        color:colour(blue,500);
+    }
+    
+    .services h5 {
+        margin-top: rhythm(8);
+        margin-bottom: rhythm(4);
+    }
+}
+
+/* work items */
+body.workitem {
+        .workitem_components {@include subhead_large();
+                              margin-top: rhythm(4);
+                              margin-bottom: rhythm(4);
+                               text-align:center;
+                               margin-left: auto;
+                               margin-right: auto;}
+             .workitem_title {
+                  text-align:center;
+                @include setTypeSize('s3');
+                 margin-bottom: rhythm(2);
+                 @include for-size(tablet-landscape-up){
+                 @include setTypeSize('s4');
+                margin-bottom: rhythm(8);
+                               }
+    }
+}
+
+
+/* Cards */
+.card_list{
+    .card_title {
+                 @include setTypeSize('s2');
+                 @include setTypeFace('secondary');
+                 margin-top: rhythm(4);
+                 text-align:left;
+                }
+    
+    .work_components, .post_time {@include setTypeSize('s12');
+                      font-weight:600;
+                      margin: rhythm(2) 0;
+                      text-transform: uppercase;
+                      letter-spacing:1.5px;
+                      color:colour(teal, 500);}
+   
+    .card_title a {text-decoration:none;}
+    .card_title a, .card_title a:visited {color: colour(blue, 400);}
+
+    
+    .card_article .card:hover {
+        .card_title a {color: colour(blue, 600);}
+        .work_components {color: colour(teal, 700);}
+}
+}
+
+
+
+/* site footer */
+.site_footer {
+    .footer_bottom {
+        @include for-size(tablet-portrait-up){
+        padding-top: rhythm(4);   
+        }
+        }
+    
+    h3 {text-align:left;
+        margin: rhythm(6) 0;
+        color: colour(yellow, 100);
+        }
+    
+    
+    label p {
+            @include setTypeSize('s0');    
+            margin: rhythm(2) 0; 
+            color: colour(yellow, 200);
+            }
+    textarea, input {margin-top: rhythm(2);
+                     margin-bottom: rhythm(5);
+    background-color: colour(blue, 800);
+    border:1px solid colour(blue, 700);
+    display:block;
+    width:100%;
+    padding: 0.5rem 1rem;
+    color: colour(blue, 300);
+        @include setTypeFace('primary');
+        @include setTypeSize('s1');
+        border-radius: $gutter/4;
+        transition: all .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+    will-change: '';
+    
+        &:active, &:focus {border:1px solid colour(blue,400);
+        background-color: colour(blue, 700);}
+    
+    }
+    
+    button {@include button;
+            @include setTypeSize('s1');}
+    
+    .copyright p {
+        color: colour(blue, 200);
+        @include setTypeSize('s10');
+        text-align:center;
+        
+        @include for-size(tablet-portrait-up){
+         @include setTypeSize('s0');   
+         text-align:center;
+        }
+        
+        @include for-size(tablet-landscape-up){
+            text-align:left;
+        }
+                    }
+}
+
+
+
+
+
+
+
+
+
+figure.media, .single_post figure {figcaption, figcaption p {font-style: italic;
+                               @include setTypeSize('s1');
+             @include setTypeFace('primary');
+             color:colour(charcoal, 600);}
+}
+
+.sitenavigation {
+    .contactme {@include setTypeSize('s0');}
+    .menu{
+    display:flex;
+    align-items:center;
+   list-style:none;
+  margin:0;
+  padding:0;
+  
+         
+  a {@include allCaps();
+     @include setTypeSize('s0');
+    @include setTypeFace('primary');
+       text-decoration:none;
+             
+        &:after{content:"";
+           display:block;
+           height:1px;
+           border-bottom: solid 1px white;  
+           transform: scaleX(0);  
+           transition: transform 250ms ease-in-out;}
+
+        &:hover {
+            
+            &:after{width:100%;
+                         transform: scaleX(1);}}
+    
+    }      
+  li {display:inline-block; vertical-align:center; padding: 0 20px;}
+  li.current {background:colour(blue, 700);
+              border-radius:11px;}  
+  li a {transition: all 0.3s ease 0s;}
+    }
+    
+}
+
+/* header module */
+.page_header, .page_header a:link, .page_header a:visited, .page_header a:hover {@include setTypeSize(s3);
+            font-weight:bold;
+             @include setTypeFace(secondary);
+             color:colour(yellow,100);
+             text-align:center;
+    @include for-size(tablet-portrait-up){
+       @include setTypeSize(s4); 
+    }
+            }
+
+.page_header a:link, .page_header a:visited, .page_header a:hover {text-decoration:none;}
+.work_header, .blog_header, .about_header {@include mainhead();}
+
+
+
+body.mywork, body.blog, body.error, body.blogpost {
+    .page_header {text-shadow: 0px 5px 10px transparentize(colour(teal, 800), 0.40);}
+}
+
+
+/* notebook post extracts */
+li.post {
+    .post_category {@include subhead();
+                    text-align:center;
+                    margin:0;
+        @include for-size(tablet-portrait-up){
+            text-align:left;
+        }
+    }
+    .post_title, .post_title a:link, .post_title a:visited {@include setTypeSize('s2');
+                margin:0;
+                 color:colour(blue, 700);
+                text-decoration:none;
+        @include for-size(tablet-portrait-up){
+            text-align:left;
+        }
+    
+    }
+    
+    .post_title a:hover {
+        text-decoration:underline;
+        color:colour(blue, 400);
+    }
+    .post_time {@include setTypeSize('s0');
+                margin:0;
+                color: colour(charcoal, 500);
+                text-align:center;
+        @include for-size(tablet-portrait-up){
+            text-align:left;
+        }
+    
+    }
+    .post_footer {text-align:left;}
+    .post_permalink {@include setTypeSize('s0');
+                    margin-top:0;
+                    margin-right:auto;}
+}
+
+
+aside.sidebar {
+    .category li {margin-bottom: calc(#{$standardmeasure}/2);}
+    .category li:last-child {margin-bottom:0;}
+    .category li a, .category li a:visited {
+        @include setTypeFace('primary');
+        @include setTypeSize ('s1');
+        margin-top:0;
+        margin-bottom: calc(#{$standardmeasure}/2);
+        text-decoration: none;
+        color: colour(charcoal, 600);
+        font-weight: 300;
+        
+        .post_count {color:colour(teal,700);
+                 text-decoration: none !important;
+                 transition: border-color .15s ease-out;}
+        
+    }
+    
+        .category li a:hover {
+            color:colour(teal,900);
+    
+            .post_count{color:colour(teal,900)} 
+    }
+    
+}
+
+/* notebook posts */
+
+body.home .blog, body.blog, body.blogpost, .relatedposts {
+ul.tags, ul.share_links {
+    li.heading p {font-weight:700;
+                  margin-top:0;
+                  margin-bottom:0;
+                  margin-right:0.25rem;}
+    li.tag a, li.tag a:visited  {
+        background-color: colour(blue, 300);
+        font-size: .85714286rem;
+        display:inline-block;
+        line-height: 1;
+        vertical-align: baseline;
+        margin: 0 .14285714em;
+        margin-left: 0.142857em;;
+        background-image: none;
+        padding: .5833em .833em;
+    padding-right: 0.833em;
+    padding-left: 0.833em;
+     color: white;
+    text-transform: none;
+        font-weight: 700;
+border-radius: .28571429rem;
+transition: background .1s ease;
+text-decoration:none;
+}
+    
+    li.tag a:hover {
+           background-color: colour(blue, 400);
+    }
+    }
+} 
+
+body.blog, body.blogpost {
+     aside.sidebar {padding-top:rhythm(3);}
+    .sidebar h3 {margin-bottom: rhythm(4);}
+    .pagination_links {
+        
+        .current, .page_nav {
+        border: 1px solid colour(blue, 300);
+        color: colour(blue, 300);
+        }
+        
+        li a, li a:visited {        
+            background-color: colour(blue, 300);
+                 color: white;}
+        
+    li a, li a:visited, .current, .page_nav  {
+        font-size: .85714286rem;
+        display:inline-block;
+        line-height: 1;
+        vertical-align: baseline;
+        margin: $standardmeasure .14285714em 0 .14285714em;
+        margin-left: 0.142857em;;
+        background-image: none;
+        padding: .5833em .833em;
+    padding-right: 0.833em;
+    padding-left: 0.833em;
+    text-transform: none;
+        font-weight: 700;
+border-radius: .28571429rem;
+transition: background .1s ease;
+text-decoration:none;
+}
+    
+    li a:hover {
+           background-color: colour(blue, 400);
+    }
+    
+    
+}
+    .post_title, .category_title {
+                  text-align:center;
+                @include setTypeSize('s35');
+                 margin-top: rhythm(3);
+                margin-bottom: rhythm(1);
+    }
+    
+    .category_title {margin-bottom: rhythm(4);}
+}
+
+body.blogpost {
+    .page_navigation {
+        .navigation_heading {font-weight:700;
+                            margin-bottom:0 !important;
+                              color: colour(blue,600);}
+        .navigation_heading + p {margin-top: 0;}
+    }
+    .page_navigation {
+        
+        .next_page p {
+        @include for-size(tablet-portrait-up){
+        text-align:right !important;    
+        }
+            
+        }    
+    }
+    .post_header .post_time {@include setTypeSize('s1');
+                      font-weight:600;
+                      margin: rhythm(2) 0;
+                      text-transform: uppercase;
+                      text-align:center;
+                      letter-spacing:1.5px;
+                      color:colour(teal, 500);}
+    .post_header { margin-bottom: rhythm(8);}
+    .post_area h3 {margin: rhythm(4) 0;}
+}
+
+
+
+
+
+// -------------------------------------------------- */
+
+
+
+

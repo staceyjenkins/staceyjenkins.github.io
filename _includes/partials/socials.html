@@ -1,0 +1,8 @@
+<ul class="socials">
+     {% for item in site.data.socials.socialsites %}
+    <li class="{{item.name | downcase}}">
+    <a href="{{item.url}}" title="{{item.name}}" target="_blank"><i class="{{item.icon}} fa-2x"></i><span>{{item.name}}</span></a>
+    </li>            
+    {% endfor %}
+    <li class="email"><a href="mailto:hello@staceyjenkins.co.uk" title="Email"><i class="fas fa-envelope fa-2x"></i><span>Email</span></a></li>
+      </ul>

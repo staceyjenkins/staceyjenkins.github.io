@@ -1,0 +1,64 @@
+  <footer class="site_footer">
+            <div class="footer_banner">
+                      {% include /partials/footer_top.html %}
+            <div class="footer_bottom">
+                <div class="section_wrap">
+                    <div class="footer_grid">
+      
+      <div class="top_row">
+      <div class="contactform" id="contact">
+      <h3>Let's get in touch</h3>
+      <form
+  action="https://formspree.io/mdowejbr"
+  method="POST"
+>
+    <div class="form_row">
+        <div class="name">
+    <label>
+        <p>Your name:</p>
+    <input type="text" name="_name">
+  </label>
+            </div>
+        <div class="email">
+    <label>
+      <p>Your email:</p>
+    <input type="text" name="_replyto">
+  </label>
+        </div>
+  </div>
+    <div class="message">    
+  <label>
+    <p>Your message:</p>
+    <textarea name="message"></textarea>
+  </label>
+    </div>  
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
+      </div>
+      <div class="right_col">
+        <h3>Let's get social</h3>  
+       {% include /partials/socials.html %}     
+      </div>
+        </div>
+    <div class="bottomrow"> 
+        <div class="copyright">
+       <p><small>All content unless otherwise stated is (c) 2016-2020 Stacey 'froginajar' Jenkins
+           <br/><a href="{{site.url}}/{{site.baseurl}}privacypolicy/" title="Privacy Policy">Privacy Policy</a></small></p>
+      </div>
+      <div class="sitemap">
+         {% include /partials/navigation.html %}
+      </div>
+    </div>
+                </div>
+                </div>
+                </div>
+                </div>   
+    </footer>    
+
+    {% include /partials/requirescripts.html %}
+
+
+  
+      

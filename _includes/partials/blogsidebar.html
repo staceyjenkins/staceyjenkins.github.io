@@ -1,0 +1,23 @@
+<aside class="sidebar">
+<h3>About Me</h3>
+<p>
+ I’m a Welsh full-stack designer and illustrator who loves helping people leap ahead. I love creating fantastic content for fantastic people, from pencil to pixel and pride myself on making great things that do great things for the people I work with.</p>
+</p>
+    {% include /partials/socials.html %}
+   <h3>Categories</h3>
+                    
+<ul class="category">
+{% assign tags_list = site.categories %}  
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+      <li><a href="{{site.url}}{{site.baseurl}}/blog/category/{{tag}}"  title="{{ tag | capitalize }}"><strong>{{ tag | capitalize }}</strong> <span class="post_count">{{ site.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %} 
+      <li><a href="{{site.url}}{{site.baseurl}}/blog/category/{{tag[0]}}"  title="{{tag[0] | capitalize }}"><strong>{{ tag[0] | capitalize }}</strong> <span class="post_count">{{ tag[1].size }}</span></a></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</ul>
+                                 
+</aside>

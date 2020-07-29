@@ -1,0 +1,21 @@
+clientlist:
+    - name: HSBC
+      logo: hsbc.png
+    - name: RM Education
+      logo: rmeducation.png
+    - name: Which?
+      logo: which.png
+    - name: Waves
+      logo: waves.png
+    - name: Moo
+      logo: moo.png
+    - name: Simpson Spence Young
+      logo: ssy.png
+    - name: Web Hosting Buzz
+      logo: webhostingbuzz.png
+    - name: Diageo
+      logo: diageo.png
+    - name: M&S
+      logo: mands.png
+    - name: Tesco
+      logo: tesco.png

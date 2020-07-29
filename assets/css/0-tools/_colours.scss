@@ -1,0 +1,86 @@
+/*Colour maps*/
+// -------------------------------------------------- */
+@function colour($colourname: charcoal, $tone:500) {
+  $colours: (
+ yellow:(
+100: #FEF8E7,
+200: #FEF0D0,
+300: #FEE5B8,
+400: #FEDBA7,
+500: #FECA8A,
+600: #DAA064,
+700: #B67945,
+800: #93562C,
+900: #793D1A,
+     ),
+     charcoal:(
+    100: #F7F2F2,
+  200: #F0E6E5,
+  300: #D3C5C6,
+  400: #A7999B,
+  500: #6D6164,
+  600: #5D464E,
+  700: #4E303E,
+  800: #3F1E30,
+  900: #341228, 
+    ),
+    teal:(
+        100: #DEFCED,
+        200: #BFFAE0,
+        300: #9BF0D3,
+        400: #7EE1C9,
+        500: #55CEBC,
+        600: #3EB1AA,
+        700: #2A9094,
+        800: #1B6B77,
+        900: #105062,
+    ),
+         blue:(
+        100: #D3F5F8,
+200: #AAE7F1,
+300: #77C3D7,
+400: #4E95AF,
+500: #205C7A,
+600: #174868,
+700: #103657,
+800: #0A2646,
+900: #061B3A,
+    ),
+  );
+
+  //2. Grab colour and its tone value from map
+  @if ($tone != null) {
+    $colour: map-get(map-get($colours, $colourname), $tone);
+    @return $colour;
+  } @else {
+    $colour: map-get(map-get($colours, $colourname), base);
+    @return $colour;
+  }
+}
+$black: colour(charcoal,800);
+// -------------------------------------------------- */
+
+@mixin gradient(){ background: linear-gradient(
+    to bottom,
+    transparentize($gradientcolour, 0.2409) 0%,
+    transparentize($gradientcolour, 0.25086) 8.1%,
+    transparentize($gradientcolour, 0.2855) 15.5%,
+    transparentize($gradientcolour, 0.3271) 22.5%,
+    transparentize($gradientcolour, 0.3807) 29%,
+    transparentize($gradientcolour, 0.4437) 35.3%,
+    transparentize($gradientcolour, 0.5134) 41.2%,
+    transparentize($gradientcolour, 0.587) 47.1%,
+    transparentize($gradientcolour, 0.662) 52.9%,
+    transparentize($gradientcolour, 0.7357) 58.8%,
+    transparentize($gradientcolour, 0.8053) 64.7%,
+    transparentize($gradientcolour, 0.8683) 71%,
+    transparentize($gradientcolour, 0.9219) 77.5%,
+    transparentize($gradientcolour, 0.9635) 84.5%,
+    transparentize($gradientcolour, 0.9904) 91.9%,
+    transparentize($gradientcolour, 1) 100%
+  );  }
+
+$twitter: #1DA1F2;
+$linkedin: #0077b5;
+$instagram: #e1306c;
+$email: colour(teal, 500);

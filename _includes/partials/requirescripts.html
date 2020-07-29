@@ -1,0 +1,15 @@
+<script>
+ var $options = {
+        
+        scriptUrl: '//http-www-staceyjenkins-co-uk.disqus.com/embed.js',
+        laziness: 1,
+        throttle: 250,
+          disqusConfig: function()
+  {
+    this.page.title       = '{{page.title}}';
+    this.page.url         = '{{site.url}}{{site.baseurl}}{{page.url}}';
+    this.page.identifier  = '{{page.url}}';
+  }
+    };
+</script>
+

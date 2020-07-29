@@ -1,0 +1,9 @@
+<nav class="sitenavigation" role="navigation" aria-label="Navigation">
+    
+        
+            <ul class="menu">
+                {% for link in site.data.navigation.masthead %}
+                <li class="{% if page.url == {{link.url}} %}current{% endif %}"><a href="{{site.url}}{{site.baseurl}}{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+    </ul>
+</nav>

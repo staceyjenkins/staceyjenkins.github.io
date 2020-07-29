@@ -1,0 +1,92 @@
+  $sitewidth: 75rem;
+  $halfsitewidth: $sitewidth/2;
+  $halfcolumn: calc(50vw - #{$halfsitewidth});
+  $footerheight: 13.235294118rem;
+  $headerheight: 5.625rem;
+
+// Handy breakpoint mixins by David Gilbertson - https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+// -------------------------------------------------- */
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } 
+    @else if $size == caption_breakpoint{
+    @media (min-width: 700px) { 
+            @content; 
+    }
+    } 
+  @else if $size == tablet-portrait-up {
+    @media (min-width: 768px) { 
+            @content; 
+    }
+    } 
+  @else if $size == header_breakpoint {
+    @media (min-width: 978px) { @content; }
+  }
+    
+
+    
+  @else if $size == tablet-landscape-up {
+    @media (min-width: 1038px) { @content; }
+  } 
+
+      @else if $size == blog_breakpoint {
+    @media (min-width:1086px) { @content; }
+  } 
+    
+  @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+            @content; 
+    }
+  } 
+  @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { 
+            @content; }
+  }
+}
+// -------------------------------------------------- */
+
+
+
+/*GRID SYSTEM 
+// -------------------------------------------------- */
+
+$gutter: 30px;
+$margin: $gutter/2;
+
+//columns
+$one: 8.33%;
+$two: 16.667%;
+$three: 25%;
+$four: 33.333%;
+$five: 41.667%;
+$six: 50%;
+$seven: 58.333%;
+$eight: 66.667%;
+$nine: 75%;
+$ten: 83.333%;
+$eleven: 91.667%;
+$twelve: 100%;
+
+@mixin flexgrid(){
+  display:flex;
+  flex-flow:row wrap;
+  flex: 0 1 auto;
+  width:100%;
+  margin:0 auto;
+  justify-content:space-between;
+}
+
+@mixin column($columns: $twelve, $padding:false){
+  flex: $columns $columns auto;
+  flex-basis: $columns;
+  width: $columns;
+  @if not $padding {
+    padding:0;
+  } @else {
+    padding-right: $margin;
+    padding-left: $margin;
+  }
+}
+
+// -------------------------------------------------- */

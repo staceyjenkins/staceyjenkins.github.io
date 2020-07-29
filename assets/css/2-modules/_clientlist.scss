@@ -1,0 +1,75 @@
+.client_row {
+    @include for-size(tablet-portrait-up){
+    width:75%;
+    margin:0 auto;
+    }
+}
+
+.client_list{
+    @include gridsupport(){
+     display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:30px;        
+    grid-auto-rows: 1fr;
+    margin:0;
+    width:100%;
+    }
+        list-style:none;
+        display:inline-flex;
+        flex-flow:row wrap;
+        width:calc(100% + 30px);
+        margin:0 -15px;
+        position:relative;
+    
+    @include for-size(tablet-portrait-up){
+                grid-template-columns: repeat(5, 1fr);
+        }
+           @include for-size(tablet-landscape-up){
+               grid-template-columns: repeat(5, 1fr);
+        }
+    
+    
+    li { 
+        @include gridsupport(){
+            width:100%;
+            padding:0;
+        }
+        
+        display: inline-block;
+        margin: 0;
+        text-align: left;
+        vertical-align: top;
+        padding: 0 15px;
+        width: 33%;
+        @include for-size(tablet-portrait-up){
+             @include gridsupport(){
+            width:100%;
+        }
+            width:25%;
+        }
+           @include for-size(tablet-landscape-up){
+                @include gridsupport(){
+            width:100%;
+            padding:0;
+        }
+            width:16.6666667%;
+        }
+    
+    }
+    
+    .client {
+        background:white;
+        height:0;
+        width:100%;
+        padding-bottom: 100%;
+        border-radius:4px;
+        overflow:hidden;
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        @include boxshadows();
+        transition: all .2s ease-in-out;
+        margin-bottom:1.75rem;
+    }
+    
+}

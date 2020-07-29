@@ -1,0 +1,24 @@
+---
+layout: default
+---     
+
+<section class="work_item">
+    <div class="section_wrap">
+    <div class="workcontent">
+            <div class="workitem_heroimage">
+            <figure><img src="{{site.url}}{{site.baseurl}}/assets/img/{{page.thumb}}" alt="{{page.title}}"></figure>
+            </div>    
+            <div class="workitem_maincontent">
+                <header class="workitem_header">
+                <p class="workitem_components">{{page.type}}</p>
+                <h2 class="workitem_title">{{page.title}}</h2>
+                </header>
+                <div class="workitem_description">
+             {{ content }}
+                </div>
+            </div>
+            </div>
+        
+        {% include /partials/relatedwork.html
+        %}
+</section>

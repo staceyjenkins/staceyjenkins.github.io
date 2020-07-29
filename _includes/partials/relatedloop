@@ -1,0 +1,30 @@
+ <ul class="work_list">
+        {% assign maxRelated = 4 %}
+        {% assign minCommonCategories = 2 %}
+        {% assign maxRelatedCounter = 0 %}
+        
+            <!--*--->{% for work in site.workitems %}
+                {% assign sameCategoryCount = 0 %}
+                {% assign commonCategories = 0 %}
+                   
+                    <!--**--->{% if work.url != page.url %}
+                    <!--***--->{% for category in work.workcategories %}
+                    <!--****--->{% if page.categories contains category %}
+                    {% assign sameCategoryCount = sameCategoryCount | plus: 1 %}
+                    {% capture categoryMarkup %}<p class="label label-default">{{category}}</p>{% endcapture %}
+                    {% assign commonCategories = commonCategories | append: categoryMarkup %}
+                    <!--****--->{% endif %}
+                    <!--***--->{% endfor %}
+                    <!--**--->{% endif %}
+        
+                <!--*****--->{% if sameCategoryCount >= minCommonCategories %}
+        
+                {% include /partials/workloop.html %}
+        
+                {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                <!--******--->{% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+                <!--******--->{% endif %}
+                <!--*****--->{% endif %}
+            <!--*--->{% endfor %}
+            </ul>

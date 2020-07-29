@@ -1,0 +1,21 @@
+---
+layout: default
+---    
+
+<div class="titlecontent">
+        <div class="title_overlay">
+            <h2 class="page_header"><a href="{{site.url}}{{site.baseurl}}/blog/">Blog</a></h2>
+            </div>
+       </div>
+            <section class="blog_content">
+                <div class="section_wrap">
+                <div class="blogcontent">  
+                <div class="blog_structure">
+                <div class="post_area">
+                   {{content}}
+                </div>
+                     
+                {% include /partials/blogsidebar.html %}
+          </div>
+                </div>
+    </section>

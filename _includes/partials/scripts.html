@@ -1,0 +1,29 @@
+<!--scripts-->
+      <script defer src=""></script>
+       <script src="../assets/js/jquery.waypoints.min.js"></script>
+      <!-- Fall back to a local copy of jQuery if the CDN fails-->
+<script>
+
+  const jQuery = require('jquery')
+  const $ = jQuery
+  require('{{site.url}}{{site.baseurl}}/assets/js/jquery.min.js')
+
+
+ var $options = {
+        
+        scriptUrl: '//http-www-staceyjenkins-co-uk.disqus.com/embed.js',
+        laziness: 1,
+        throttle: 250,
+          disqusConfig: function()
+  {
+    this.page.title       = '{{page.title}}';
+    this.page.url         = '{{site.url}}{{site.baseurl}}{{page.url}}';
+    this.page.identifier  = '{{page.url}}';
+  }
+    };
+</script>
+   
+<script src="../assets/js/instagramfeed.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="../assets/js/disqusloader.js"></script>
+    <script src="../assets/js/scripts.js"></script>

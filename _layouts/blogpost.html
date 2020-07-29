@@ -1,0 +1,63 @@
+---
+layout: blog
+--- 
+
+<div class="post_container">
+<header class="post_header">
+    
+<h2 class="post_title">
+{{page.title}}
+</h2>
+<p class="post_time"><time datetime="{{page.date}}">{% assign day = page.date | date: "%-d"  %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{{ day }}st
+  {% when '2' or '22' %}{{ day }}nd
+  {% when '3' or '23' %}{{ day }}rd
+  {% else %}{{ day }}th
+{% endcase %}
+{{ page.date | date: "%B, %Y" }}
+</time></p>   
+</header>
+
+
+{{content}}
+
+
+
+<div class="post_footer">
+    <div class="category_block">
+     <ul class="tags">
+         <li class="heading"><p>Categories:</p></li>
+    {% assign sortedCategories = page.categories | sort %}
+    {% for category in sortedCategories %}
+        <li class="tag">
+            <a href="{{site.url}}{{site.baseurl}}/blog/category/{{ category }}">{{ category }}</a>
+        </li>
+    {% endfor %}
+</ul>
+    </div>
+</div>
+
+<div class="page_navigation">
+{% if page.previous.url %}
+    <div class="previous_page">
+    <p class="navigation_heading">Previous Post</p>
+    <p><a href="{{site.url}}{{site.baseurl}}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a></p>
+    </div>    
+  {% endif %}
+  {% if page.next.url %}
+    <div class="next_page">
+    <p class="navigation_heading">Next Post</p>
+    <p><a href="{{site.url}}{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }} &raquo;</a></p>    
+    </div>
+  {% endif %}
+</div>
+
+{% include /partials/relatedposts.html %}
+
+<div class="comments">
+<h3>Comments</h3>
+<div class="disqus"></div>
+</div>
+</div>
+

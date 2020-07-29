@@ -1,0 +1,36 @@
+<li class="card_article">
+    <div class="card">
+                        <div class="card_image">
+                        {% include /partials/card_border.html %}
+                        <figure class="image_container">
+                        <a href="{{site.url}}{{site.baseurl}}{{post.url}}">
+                        {% if post.thumb %}
+                            {% if post.thumb contains 'uploads' %}
+                            <img src="{{site.url}}{{site.baseurl}}/{{post.thumb}}" alt="{{post.title}}">
+                            {% else %}
+                            <img src="{{post.thumb}}" alt="{{post.title}}"/>
+                        {% endif %}
+                        {% else %}    
+                        <img src="{{site.url}}{{site.baseurl}}/assets/img/blog_default.png" alt="{{post.title}}"/> 
+                        {% endif %}
+                        </a>
+                        </figure>
+                        </div>    
+                        <div class="card_caption">
+                        <header class="post_header">
+                        <h3 class="card_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
+                        <p class="post_time"><time datetime="{{post.date}}">{% assign day = post.date | date: "%-d"  %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{{ day }}st
+  {% when '2' or '22' %}{{ day }}nd
+  {% when '3' or '23' %}{{ day }}rd
+  {% else %}{{ day }}th
+{% endcase %}
+{{ post.date | date: "%B, %Y" }}</time></p> 
+                    </header>
+                        <footer class="post_footer">
+                        <a class="post_permalink button" href="{{site.url}}{{site.baseurl}}{{post.url}}">Read more</a>
+                        </footer>
+                        </div>
+    </div>
+                    </li>

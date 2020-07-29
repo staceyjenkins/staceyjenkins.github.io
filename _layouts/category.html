@@ -1,0 +1,67 @@
+---
+layout: default
+title: Posts filed under {{page.tag}}
+---  
+
+<div class="titlecontent">
+        <div class="title_overlay">
+            <h2 class="page_header"><a href="{{site.url}}{{site.baseurl}}/blog">Blog</a></h2>
+            </div>
+       </div>
+            <section class="blog_content">
+                <div class="section_wrap">
+                <div class="blogcontent">  
+                <div class="blog_structure">
+                <div class="post_area">
+                <h3 class="category_title">Filed Under {{page.tag | capitalize}}</h3>
+                    <div class="card_row">
+                    <ul class="card_list">
+                   {% for post in site.categories[page.tag] %}
+                    {% include /partials/postloop.html %}
+                    {% endfor %}   
+                    </ul>
+                    </div>
+                    
+                    {% if paginator.total_pages > 1 %}
+<div class="pagination">
+    <ul class="pagination_links">
+  {% if paginator.previous_page %}
+    <li>    
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% else %}
+    <div class="page_nav">&laquo; Prev</div>
+    </li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    <li>  
+    {% if page == paginator.page %}
+      <div class="current">{{ page }}</div>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+        </li>  
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <li>   
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% else %}
+    <div class="page_nav">Next &raquo;</div>
+    </li>     
+  {% endif %}
+   </ul>    
+</div>
+{% endif %}
+                </div>
+                     
+                {% include /partials/blogsidebar.html %}
+          </div>
+                </div>
+    </section>
+                
+                
+                
+                

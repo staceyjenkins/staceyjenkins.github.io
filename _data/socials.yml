@@ -1,0 +1,10 @@
+socialsites:
+    - name: Twitter
+      url: http://www.twitter.com/froginajar
+      icon: fab fa-twitter
+    - name: LinkedIn
+      url: http://www.linkedin.com/in/stacey-jenkins-design
+      icon: fab fa-linkedin-in
+    - name: Instagram
+      url: http://www.instagram.com/froginajar
+      icon: fab fa-instagram

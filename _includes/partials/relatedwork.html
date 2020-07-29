@@ -1,0 +1,40 @@
+{% unless page.categories == null %}
+<div class="relatedwork">
+<h3>Related Work</h3>
+    <ul class="card_list">
+   {% assign maxRelated = 4 %}
+   {% assign minCommonCategories = 2 %}
+   {% assign maxRelatedCounter = 0 %}
+   
+        {% for item in site.workitems %}
+            {% assign sameCategories = 0 %}
+            {% assign commonCats = '' %}
+                
+            {% for category in item.categories %}
+                    {% if item.url != page.url %}
+                        {% if page.categories contains category %}
+                            {% assign sameCategories = sameCategories | plus: 1 %}
+                            
+                            {% capture categorymarkup %}
+                             <span class="label label-default">{{category}}</span>
+                            {% endcapture %}
+                        {% endif %}
+                    {% endif %}
+            {% endfor %}
+        
+            {% if sameCategories >= minCommonCategories %}
+                {% include /partials/workloop.html %}
+                {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                {% if maxRelatedCounter >= maxRelated %}
+                    {% break %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        
+    </ul>
+    </div>   
+{% endunless %}
+
+
+
+
