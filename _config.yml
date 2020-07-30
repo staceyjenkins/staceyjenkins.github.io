@@ -23,7 +23,7 @@ email: hello@staceyjenkins.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
   Portfolio and blog of Stacey Jenkins, digital designer and illustrator
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.staceyjenkins.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.staceyjenkins.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: froginajar
 github_username:  staceyjenkins
 
