@@ -12,6 +12,7 @@
 
     <meta property="og:title" content="{% if page.title == 'Home' %}{{site.title}}{% else %}{{page.title}} - {{site.title}}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <!-- Testing Twitter Cards -->  
     <meta property="og:image" content="
      {% if page.title == 'Home' %}
          {{site.url}}{{site.baseurl}}/assets/img/header/header_top_characters.png 
@@ -23,7 +24,7 @@
                             {{site.url}}{{site.baseurl}}/assets/img/{{page.thumb}}
                       {% endif %}
              {% else %}
-                      {{site.url}}{{site.baseurl}}/assets/img/blog_default.png               
+                      {{site.url}}{{site.baseurl}}/assets/img/blog_default.png      
              {% endif %}
              {% endif %}">
     <meta property="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}">
