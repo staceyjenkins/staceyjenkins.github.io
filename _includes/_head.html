@@ -4,7 +4,7 @@
     <title> {% if page.title == 'Home' %}{{site.title}}{% else %}{{page.title}} - {{site.title}}{% endif %}
         </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" as="style" href="{{site.url}}{{site.baseurl}}/assets/css/fonts.css">
+    <!--<link rel="preload" as="style" href="{{site.url}}{{site.baseurl}}/assets/css/fonts.css">-->
     <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/styles.css">
     <script data-main="{{site.url}}{{site.baseurl}}/assets/scripts/config" src="{{site.url}}{{site.baseurl}}/assets/scripts/lib/require.js"></script>
     
@@ -12,10 +12,20 @@
 
     <meta property="og:title" content="{% if page.title == 'Home' %}{{site.title}}{% else %}{{page.title}} - {{site.title}}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.title == 'Home' %}{{site.url}}{{site.baseurl}}/assets/img/header/header_top_characters.png {% else %}
-     {% if page.thumb contains 'uploads' %}{{site.url}}{{site.baseurl}}/{{page.thumb}}
+    <meta property="og:image" content="
+     {% if page.title == 'Home' %}
+         {{site.url}}{{site.baseurl}}/assets/img/header/header_top_characters.png 
+         {% else %}
+            {% if page.thumb %}
+                    {% if page.thumb contains 'uploads' %}
+                            {{site.url}}{{site.baseurl}}/{{page.thumb}}
                             {% else %}      
-    {{site.url}}{{site.baseurl}}/assets/img/{{page.thumb}}{% endif %}{% endif %}">
+                            {{site.url}}{{site.baseurl}}/assets/img/{{page.thumb}}
+                      {% endif %}
+             {% else %}
+                      {{site.url}}{{site.baseurl}}/assets/img/blog_default.png               
+             {% endif %}
+             {% endif %}">
     <meta property="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}">
     <meta name="twitter:card" content="summary_large_image">
 
