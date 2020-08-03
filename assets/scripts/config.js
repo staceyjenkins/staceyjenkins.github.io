@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl:'https://www.staceyjenkins.co.uk/portfolio2021_prototype/assets/scripts',
+    baseUrl:'https://www.staceyjenkins.co.uk/assets/scripts',
     paths:{
         disqusloader:'lib/disqusloader-min',
         jquery: '//code.jquery.com/jquery-3.5.1.min',
