@@ -9,7 +9,6 @@ function loadWaypoints(){
     };
 
 function loadPTEngine(){
-        console.log('PT Tracking');
         window._pt_lt = new Date().getTime();
         window._pt_sp_2 = [];
         _pt_sp_2.push('setAccount,3428f523');
