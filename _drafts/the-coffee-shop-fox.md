@@ -32,4 +32,4 @@ Plus, as a little experiment, I decided to play around with iMovie to make this 
     </figure>
     
 
-I'll post some more artwork soon!
+I'll post some more artwork soon! In the meantime, please feel free to [follow me on Instagram](http://www.instagram.com/froginajar) for my latest sketches and work in progress shots. 
