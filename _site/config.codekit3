@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "32186",
 "files": {
+	"/.forestry/front_matter/templates/blog-post.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.forestry/front_matter/templates/blog-post.yml",
+		"oF": 0
+		},
 	"/.forestry/settings.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -124,6 +132,25 @@
 		"oA": 0,
 		"oAP": "/_data/socials.yml",
 		"oF": 0
+		},
+	"/_drafts/the-coffee-shop-fox.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_drafts/the-coffee-shop-fox.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/_includes/_footer.html": {
 		"cB": 0,
@@ -285,6 +312,14 @@
 		"oAP": "/_includes/partials/workloop.html",
 		"oF": 0
 		},
+	"/_includes/ptengine.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_includes/ptengine.html",
+		"oF": 0
+		},
 	"/_layouts/blog.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -396,6 +431,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/_site/assets/css/fonts-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_site/assets/css/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_site/assets/css/styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -1012,6 +1057,28 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/_site/assets/img/uploads/khoury_coffee_shop_blog.png": {
+		"ft": 32768,
+		"iS": 1184996,
+		"oA": 0,
+		"oAP": "/_site/assets/img/uploads/khoury_coffee_shop_blog.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/assets/img/uploads/khoury_thumb.png": {
+		"ft": 32768,
+		"iS": 115081,
+		"oA": 0,
+		"oAP": "/_site/assets/img/uploads/khoury_thumb.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/_site/assets/img/uploads/txt.txt": {
@@ -1699,28 +1766,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/_site/assets/scripts/app/functions-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/app/functions-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/_site/assets/scripts/app/functions.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/app/functions-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/_site/assets/scripts/app/scripts-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1728,6 +1773,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/_site/assets/scripts/app/scripts-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/_site/assets/scripts/config-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/config-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/_site/assets/scripts/config.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/config-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -4168,6 +4235,28 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/uploads/khoury_coffee_shop_blog.png": {
+		"ft": 32768,
+		"iS": 1184996,
+		"oA": 0,
+		"oAP": "/assets/img/uploads/khoury_coffee_shop_blog.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/uploads/khoury_thumb.png": {
+		"ft": 32768,
+		"iS": 115081,
+		"oA": 0,
+		"oAP": "/assets/img/uploads/khoury_thumb.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/img/uploads/txt.txt": {
