@@ -18,6 +18,6 @@ Here's a recent painting I completed that I thought I'd share on the blog. This 
 
 Plus, as a little experiment, I decided to play around with iMovie to make this cute little animation of his fennec ears transitioning in and out.
 
-<figure class="media"><div class='embed-container'><iframe src='https://www.youtube.com/watch?v=SxLqzi5vqjs' frameborder='0' allowfullscreen></iframe> <figcaption> <p>A little Arab gentleman peers from behind a coffee shop cashier, surrounded by plants. As the video plays a set of glowing fennec fox ears appear and disappear.</p> </figcaption> </figure>
+<figure class="media"><div class='embed-container'><iframe src='https://www.youtube.com/embed/SxLqzi5vqjs' frameborder='0' allowfullscreen></iframe></div><figcaption> <p>A little Arab gentleman peers from behind a coffee shop cashier, surrounded by plants. As the video plays a set of glowing fennec fox ears appear and disappear.</p> </figcaption> </figure>
 
 I'll post some more artwork soon! In the meantime, please feel free to [follow me on Instagram](http://www.instagram.com/froginajar) for my latest sketches and work in progress shots.
