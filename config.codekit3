@@ -1742,28 +1742,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/_site/assets/scripts/config-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/config-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/_site/assets/scripts/config.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/config-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/_site/assets/scripts/lib/disqusloader-min.js": {
 		"bF": 0,
 		"ft": 64,

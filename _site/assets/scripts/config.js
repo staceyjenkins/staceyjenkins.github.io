@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl:'http://www.staceyjenkins.co.uk/assets/scripts/',
+    baseUrl:'https://www.staceyjenkins.co.uk/assets/scripts',
     paths:{
         disqusloader:'lib/disqusloader-min',
         jquery: '//code.jquery.com/jquery-3.5.1.min',
@@ -10,6 +10,6 @@ requirejs.config({
     }
 });
 
-requirejs(['http://www.staceyjenkins.co.uk/assets/scripts/app/functions']);
+requirejs(['app/functions']);
 
 
