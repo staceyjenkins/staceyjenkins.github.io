@@ -4,7 +4,7 @@ date: 2020-08-01 14:40:00 +0000
 tags: illustration
 category: illustration
 excerpt: ''
-thumb: ''
+thumb: assets/img/uploads/khoury_thumb.png
 title: The Coffee Shop Fox
 
 ---
