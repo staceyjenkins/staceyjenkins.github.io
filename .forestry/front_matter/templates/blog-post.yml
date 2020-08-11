@@ -1,0 +1,27 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: tags
+  label: tags
+- type: text
+  name: category
+  label: category
+- type: text
+  name: excerpt
+  label: excerpt
+- type: text
+  name: thumb
+  label: thumb
+- type: text
+  name: title
+  label: title
+pages:
+- _posts/the-coffee-shop-fox.md
