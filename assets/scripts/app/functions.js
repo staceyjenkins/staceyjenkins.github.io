@@ -20,6 +20,22 @@ function loadHotjar(){
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 }
 
+
+function loadInstagram(){
+    require(['instagramfeed'], function(n){ 
+        console.log('instagram loaded');
+	  $.instagramFeed({
+	    'username': 'froginajar',
+	    'container': "#loadInstagram",
+	    'items': 9,
+	    'display_profile': false,
+	    'display_biography': false,
+	    'display_igtv': false,
+	    'styling': false
+});        
+});
+}
+    
     function loadDisqus(){
         require(['disqusloader'], function(){ 
         disqusLoader( '.disqus', $options );
@@ -28,7 +44,7 @@ function loadHotjar(){
 
 require(["jquery", "fontawesome"], function() {
     $(document).ready(function() {
-        $siteFunctions = [loadWaypoints(), loadDisqus(), loadHotjar()];
+        $siteFunctions = [loadWaypoints(), loadDisqus(), loadHotjar(), loadInstagram()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
 });

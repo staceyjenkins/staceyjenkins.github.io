@@ -92,6 +92,59 @@ body.blog, body.blogpost, body.error {
         }
         width: 15.294117647rem;
     }
+        
+        .instagram_gallery {
+             @include gridsupport(){
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(123px, 1fr));
+            grid-column-gap:4px;
+            grid-row-gap: rhythm(4);
+            margin-top:0;
+            margin-left:0;
+            margin-right: 0;
+            }
+            @include for-size(tablet-landscape-up){
+            @include gridsupport(){
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(84px, 1fr));
+            grid-column-gap:4px;
+            grid-row-gap: rhythm(4);
+            margin-top:0;
+            margin-left:0;
+            margin-right: 0;
+            }
+            }
+            margin-bottom: rhythm(4);
+            position:relative;
+            display:flex;
+            width:100%;
+            margin-left:-2px;
+            margin-right:-2px;
+            margin-bottom: rhythm(4);
+            flex-flow: row nowrap;   
+            padding: 0;
+        }
+        
+        .instagram_gallery a {
+            display:block;
+            position:relative;
+            @include gridsupport(){
+                width:100%;
+                padding:0;
+            }
+            width:33%;
+            margin: 0 2px;
+        }
+        
+        .instagram_gallery a img {
+            display:block;
+            margin:0;
+            float:none;
+            max-width:100%;
+            height:auto;
+            position:relative;
+        }
+        
     }
     
     .post_area .list_of_posts {margin:0;

@@ -4,8 +4,13 @@
  I’m a Welsh full-stack designer and illustrator who loves helping people leap ahead. I love creating fantastic content for fantastic people, from pencil to pixel and pride myself on making great things that do great things for the people I work with.</p>
 </p>
     {% include /partials/socials.html %}
-   <h3>Categories</h3>
-                    
+
+<h3>Instagram</h3>
+<div id="loadInstagram" class="instagram_feed">
+    <p>Loading Instagram...</p>
+</div>
+
+<h3>Categories</h3>              
 <ul class="category">
 {% assign tags_list = site.categories %}  
   {% if tags_list.first[0] == null %}
