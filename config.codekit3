@@ -133,25 +133,6 @@
 		"oAP": "/_data/socials.yml",
 		"oF": 0
 		},
-	"/_drafts/the-coffee-shop-fox.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_drafts/the-coffee-shop-fox.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
 	"/_includes/_footer.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -387,6 +368,25 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_posts/2020-07-29-announcing-the-brand-new-staceyjenkins.co.uk.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/_posts/2020-08-11-the-coffee-shop-fox.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_posts/2020-08-11-the-coffee-shop-fox.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1766,6 +1766,28 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/_site/assets/scripts/app/functions-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/app/functions-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/_site/assets/scripts/app/functions.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/app/functions-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/_site/assets/scripts/app/scripts-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1967,6 +1989,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_site/blog/category/updates.html",
+		"oF": 0
+		},
+	"/_site/blog/illustration/the-coffee-shop-fox.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/blog/illustration/the-coffee-shop-fox.html",
 		"oF": 0
 		},
 	"/_site/blog/index.html": {
@@ -3274,6 +3304,14 @@
 		"oA": 1,
 		"oAP": "/_site/sitemap.xml",
 		"oF": 1
+		},
+	"/_site/slj_cv_2020_web.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/slj_cv_2020_web.pdf",
+		"oF": 0
 		},
 	"/_workitems/awaydays.html": {
 		"cB": 0,
@@ -6341,6 +6379,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/sitemap.xml",
+		"oF": 0
+		},
+	"/slj_cv_2020_web.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/slj_cv_2020_web.pdf",
 		"oF": 0
 		}
 	},
