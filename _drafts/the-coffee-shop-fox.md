@@ -12,7 +12,7 @@ title: The Coffee Shop Fox
 	<figure class="media">
 		<img src="http://www.staceyjenkins.co.uk/assets/img/uploads/khoury_coffee_shop_blog.png" alt=
 		"A little Arab gentleman peers from behind a coffee shop cashier, surrounded by plants. A pair of glowing golden fennec ears appear above his head"> 
-		<figcaption>A little Arab gentleman peers from behind a coffee shop cashier, surrounded by plants. A pair of glowing golden fennec ears appear above his head</figcaption>
+		<figcaption>A little Arab gentleman peers from behind a coffee shop cashier, surrounded by plants. A pair of glowing golden fennec ears appear above his head.</figcaption>
 </figure> 
 
 <p>Plus, as a little experiment, I decided to play around with iMovie to make this cute little animation of his fennec ears transitioning in and out.</p>
