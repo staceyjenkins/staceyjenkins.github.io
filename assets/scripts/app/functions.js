@@ -23,7 +23,6 @@ function loadHotjar(){
 
 function loadInstagram(){
     require(['instagramfeed'], function(n){ 
-        console.log('instagram loaded');
 	  $.instagramFeed({
 	    'username': 'froginajar',
 	    'container': "#loadInstagram",
