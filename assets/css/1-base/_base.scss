@@ -26,7 +26,8 @@ $grid-width: 100% + #{$gutter};
 }
 
 
-html {background:#fff url('../../assets/img/texture.png') repeat;}
+html {background:#fff url('../../assets/img/texture.png') repeat;
+      scroll-behavior: smooth;}
 
 .site{
   position:relative;

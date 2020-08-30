@@ -50,6 +50,19 @@ function loadHeap(){
 
 require(["jquery", "fontawesome"], function() {
     $(document).ready(function() {
+        
+        $('a').on('click'){function(event){
+            if (this.hash !== ""){
+                event.preventDefault();
+                var $hash = this.hash;
+                
+                $('html, body').animate({
+                    scrollTop: $($hash).offset().top} 800, function(){
+                    window.location.hash;
+                });
+            }
+        }};
+        
         $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
