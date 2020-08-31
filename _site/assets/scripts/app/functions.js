@@ -96,7 +96,7 @@ $('a[href*="#"]')
     }
   });
         
-        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar(), loadClicky(), loadGoogle()];
+        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
 });
