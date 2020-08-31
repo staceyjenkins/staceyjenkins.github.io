@@ -52,7 +52,7 @@ function loadGoogle(){
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-63184954-3');
+  gtag('config', 'UA-176845358-1');
 })
 };
 
