@@ -8,7 +8,7 @@ requirejs.config({
         instagramfeed: 'lib/instagramfeed',
         app: 'app',
         clicky: '//static.getclicky.com/js',
-        google: '//www.googletagmanager.com/gtag/js?id=UA-63184954-3'
+        google: '//www.googletagmanager.com/gtag/js?id=UA-176845358-1'
     }
 });
 
