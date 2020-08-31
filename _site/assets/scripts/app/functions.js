@@ -41,16 +41,62 @@ function loadInstagram(){
         });
     };
 
-/*
-function loadHeap(){
-      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
-  heap.load("116937336");
+function loadClicky(){
+    require(['clicky'], function(n){
+    var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(100869051);
+})
 };
-*/
+
+function loadGoogle(){
+    require(['google'], function(n){
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-176845358-1');
+})
+};
 
 require(["jquery", "fontawesome"], function() {
     $(document).ready(function() {
-        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
+        
+        // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+        
+        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar(), loadClicky(), loadGoogle()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
 });

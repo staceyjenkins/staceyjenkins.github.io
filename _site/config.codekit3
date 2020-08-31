@@ -165,6 +165,14 @@
 		"oAP": "/_includes/_heroarea.html",
 		"oF": 0
 		},
+	"/_includes/_tracking.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_includes/_tracking.html",
+		"oF": 0
+		},
 	"/_includes/about.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -291,14 +299,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_includes/partials/workloop.html",
-		"oF": 0
-		},
-	"/_includes/ptengine.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_includes/ptengine.html",
 		"oF": 0
 		},
 	"/_layouts/blog.html": {
@@ -3296,6 +3296,14 @@
 		"oA": 1,
 		"oAP": "/_site/robots.txt",
 		"oF": 1
+		},
+	"/_site/sitemap.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/sitemap.xml",
+		"oF": 0
 		},
 	"/_site/slj_cv_2020_web.pdf": {
 		"cB": 0,

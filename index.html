@@ -10,7 +10,8 @@ pageclass: home
         <div class="title_overlay">
         <h2 class="page_header">I'm Stacey! </h2>
         <p class="page_lead">I’m a Welsh digital designer and illustrator.</p>
-        <a class="button" href="#portfolio">Show my work</a>
+        {% include /partials/socials.html %}
+        <a class="button" href="#portfolio">Explore my work</a>
             </div>
         </div> 
         </div>
@@ -84,11 +85,11 @@ pageclass: home
     </section>   
 
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
             {% include /partials/section_top.html %}
             <div class="section_content">   
-            <div class="section_wrap">   
-        <h4 class="work_header" id="portfolio">Selected Projects</h4>
+            <div class="section_wrap" >   
+        <h4 class="work_header">Selected Projects</h4>
         <div class="card_row">
                 <ul class="card_list">
                 {% for item in site.workitems %}

@@ -818,8 +818,12 @@ figure.media, .single_post figure {
 
 ul.socials{
 	display: flex;
+    width:100%;
     flex-flow:row nowrap;
 	margin-bottom: 2em;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
 
     li a {width: 50px;
          height: 50px;
@@ -863,7 +867,9 @@ ul.socials{
     } 
     
 }
-            
+.right_col ul.socials {
+    justify-content:flex-start;
+}
 // -------------------------------------------------- */
 
 /* CARDS */

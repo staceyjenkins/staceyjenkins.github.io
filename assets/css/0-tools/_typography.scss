@@ -377,7 +377,7 @@ body.home {
         color: colour(teal, 600);
         margin-bottom: rhythm(3);
         @include for-size(tablet-landscape-up){
-            text-align:left;
+            text-align:center;
         }
     }
     .page_lead {
@@ -391,7 +391,7 @@ body.home {
              
         @include for-size(header_breakpoint){
             @include setTypeSize(s2);
-            text-align:left;
+            text-align:center;
             color:colour(blue,300);
             margin-top: rhythm(3);
         }
