@@ -1,0 +1,74 @@
+--- 
+layout: blogpost 
+date: 2020-09-01 23:00:00 +0000 
+tags: tutorials 
+category: tutorials 
+excerpt: 
+thumb: 
+title: 'Tutorial: Drawing Humans'
+
+---
+
+Back in early 2014, I worte a blogpost on my site called 'Drawing Humans'. Naturally, the annals of time ensured that that blogpost went wherever pages go when they 404\. Thankfully, while going through my earlier archives, I found an early draft of it which I will now restore to its rightful place back on the blog. Now as time has ticked on, I have since gathered other resources and useful stuff to share on this topic, but hopefully this post will give you a better idea on how to construct the figure by its proportions and I will share some of my own discoveries that may help you achieve the same!
+
+#### Wait a sec, I thought you were a designer!
+
+Yes, I am indeed a designer, but since I am also an illustrator alongside my day job. My hope is with this blog I get to share what I do in both my design work and also my illustration work. I'd love to share my knowledge in all aspects of design and illustration!
+
+### The idea
+
+The human body is one of the most complex machines in nature. The adult human skeleton is comprised of 206 bones altogether, linked together by thousands of interconnecting muscle fibres and flexible cartilage. Strangely, we are born with 306 bones which combine as we grow, creating the complex systems of our joints, limbs and spine. These are perfectly engineered and crafted over our lifetimes to connect perfectly to each other. The ball and socket joint in your shoulder is a great example of this, perfected after millennia of evolution. No wonder the thought of drawing the human figure is so daunting. There's so many parts to this engineering marvel.
+
+<figure class="media">
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/0cYal_hitz4" allowfullscreen="" frameborder="0"></iframe></div>
+
+<figcaption>
+
+In this video by Stan Prokopenko (otherwise known as [Proko on Youtube](https://www.youtube.com/channel/UClM2LuQ1q5WEc23462tQzBg)), he explains the different types of joints in the human figure and how they connect together.
+
+</figcaption>
+
+</figure>
+
+Since we are brought up as children to instantly recognise the human figure, it's horribly obvious when we make a mistake when we attempt to draw it. Something about our drawing doesn't look quite right and it unsettles us. Maybe if we changed how we looked at the human figure, we could learn how to draw it better and perhaps, we can master our own way of creating our own human characters.
+
+### Schematics and skeletons
+
+Let's say an inventor wants to make a robot. When a inventor works out how he will make this robot, he needs to figure out what he wants it to do and how his robot will achieve it. He'll need to plan out every single detail of this new creation, some of it with a little experimentation, before he can create his fully walking automaton. Riven Phoenix uses this analogy in his amazing drawing series 'The Structure Of Man'. His very simple and straightforward approach is based around the method of 1930s-40s illustrator [Andrew Loomis](https://www.amazon.co.uk/gp/product/B00HTK56QC/ref=dbs_a_def_rwt_bibl_vppi_i4). I like to call this method as the 'skeleton method'.
+
+In his calm and methodical way, Phoenix goes through every stage of creating your own schematic of the human figure by halving distances and drawing simple shapes to represent the forms and proportions. He guides you through each step with enlightening exercises. Almost instantly, you'll begin to memorise the method as you go through the exercises and learn how long the legs or how wide the torso should be. Since the aim of this post is to inspire you to start learning your own methods and approaches, I won't be replicating his course here word for word but I do recommend that you watch his series on YouTube and go through each exercise with him. It really does work your art muscles. [Here's a link to a playlist](https://www.youtube.com/watch?v=HeB-HyUqy5Y&list=PLkAIDzicB8D2aGc2hqHXaOlYz9LuP7EAu) of Riven Phoenix's free drawing lessons, explaining the Andrew Loomis' skeleton method.
+
+### Scaffolding
+
+Riven Phoenix's approach isn't entirely foolproof. Some find his style a little slow, repetitive and methodical, but his way of thinking does help to simplfy the function of the body and the measurements behind it. With Phoenix's method, I find myself struggling to fully understand his method to the side view and consequently the three-quarter view of the figure. The three-quarter view requires some ability to think three dimensionally. Since I work primarily in two dimensions, this is a little tricky! However, Frank J. Reilly's method for drawing the figure helps with this issue. Frank J. Reilly was an American illustrator who primarily taught during the 1960s. I originally discovered his method through the digital art magazine [ImagineFX](https://www.creativebloq.com/imaginefx) who frequently feature articles on drawing anatomy. I like to call it the 'scaffold method', since this approach reinforces and helps with your understanding when used alongside your skeleton. It also helps you visualise the 3D form of the human figure and teaches you the importance of landmarks: specific points on the human body that align with each other. These are incredibly useful for visualising the human figure when handling an awkward pose, especially when drawing in perspective.
+
+<figure class="media">
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/StRohW0Og3w" allowfullscreen="" frameborder="0"></iframe></div>
+
+<figcaption>
+
+In this other Proko video, Tim Gula demonstrates what he learned after studying under a fellow artist who followed Frank J. Reilly's method.
+
+</figcaption>
+
+</figure>
+
+### Architecture
+
+Once we understand how the body is designed and how it functions, we can then learn how to explore how it moves. One way in which we can use this knowledge is actually using this movement as part of the drawing. I discovered [Mike Matessi's series of FORCE drawing books](https://www.drawingforce.com/force-drawing-books) in the last two years or so, and I adore how the simple concept of applying straights and curves can help demystify the idea of drawing the human figure.
+
+<figure class="media">
+
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/JtaBjtAGsk0" allowfullscreen="" frameborder="0"></iframe></div>
+
+<figcaption>
+
+In this third Proko video, Mike Mattesi and Diego Lucia demonstrate how to apply curves and straights to express how 'force' expresses itself in the figure.
+
+</figcaption>
+
+</figure>
+
+Did you enjoy reading this blogpost? I'd love to write more of these brief tutorial insights into my work in future, so if you enjoyed it, let me know what you think in the comments below and let me know what next you'd like to see me post!
