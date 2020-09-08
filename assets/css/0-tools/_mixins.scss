@@ -7,7 +7,7 @@
 }
 
 @mixin boxshadows(){
-    box-shadow: 0px 2px 1px -1px transparentize(colour(charcoal, 400), 0.2),0px 1px 1px 0px transparentize(colour(charcoal, 400), 0.14),0px 1px 3px 0px transparentize(colour(charcoal, 400),.12);
+    box-shadow: 0px 2px 1px -1px transparentize(colour(charcoal, 300), 0.2),0px 1px 1px 0px transparentize(colour(charcoal, 300), 0.14),0px 1px 3px 0px transparentize(colour(charcoal, 300),.12);
 }
 
 $gradientcolour: colour(blue, 600);

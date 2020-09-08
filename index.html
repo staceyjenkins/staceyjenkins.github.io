@@ -11,7 +11,8 @@ pageclass: home
         <h2 class="page_header">I'm Stacey! </h2>
         <p class="page_lead">I’m a Welsh digital designer and illustrator.</p>
         {% include /partials/socials.html %}
-        <a class="button" href="#portfolio">Explore my work</a>
+        <a class="button" href="mailto:hello@staceyjenkins.co.uk">Let's get in touch</a>
+        <a class="secondarybutton" href="#portfolio">See design work&nbsp;<i class="fas fa-chevron-down"></i></a>
             </div>
         </div> 
         </div>
@@ -44,11 +45,11 @@ pageclass: home
              <div class="about_row">
         <div class="profile-text">
           {% include /partials/_description.html %}
-           <a href="http://www.staceyjenkins.co.uk/slj_cv_2020_web.pdf" target="blank" class="button cv"><span>Download my CV</span></a>
+            </div>
         </div>
                  
         <div class="services">         
-        <h5>My skillset</h5>
+        <h5>How I can help you</h5>
         <ul class="service-items">
           <li class="design"> 
             <div class="icon">
@@ -85,7 +86,7 @@ pageclass: home
             {% include /partials/section_top.html %}
             <div class="section_content">   
             <div class="section_wrap" >   
-        <h4 class="work_header">Selected Projects</h4>
+        <h4 class="work_header">Featured Work</h4>
         <div class="card_row">
                 <ul class="card_list">
                 {% for item in site.workitems %}

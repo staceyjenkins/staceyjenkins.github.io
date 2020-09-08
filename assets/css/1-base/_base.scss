@@ -330,16 +330,18 @@ margin: 0;
         }
     
     
-    ul.service-items {width:100%;
+    ul.service-items {width:75%;
+                      margin:0 auto;
         
         @include gridsupport(){
             display:grid;
-            width: 100%;
+            width: 75%;
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 30px;
-            margin: 0;
+            margin: 0 auto;
         
-        }}
+        }
+        }
         
     ul.service-items li {
         @include gridsupport(){
@@ -874,7 +876,6 @@ ul.socials{
 
 /* CARDS */
 // -------------------------------------------------- */
-
     .card_row {
     @include for-size(tablet-portrait-up){
     width:75%;
@@ -1032,6 +1033,8 @@ ul.socials{
     right: 0;
     bottom: 0;
 }
+    
+    
     .work_title a:focus {text-decoration:underline;}
     
     footer.post_footer {

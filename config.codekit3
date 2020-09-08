@@ -74,6 +74,25 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/_category/tutorials.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_category/tutorials.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/_category/update.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -179,6 +198,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_includes/about.html",
+		"oF": 0
+		},
+	"/_includes/partials/_description.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_includes/partials/_description.html",
 		"oF": 0
 		},
 	"/_includes/partials/blogsidebar.html": {
@@ -387,6 +414,25 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_posts/2020-08-11-the-coffee-shop-fox.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/_posts/2020-09-01-drawing-humans.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_posts/2020-09-01-drawing-humans.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1983,6 +2029,14 @@
 		"oAP": "/_site/blog/category/illustration.html",
 		"oF": 0
 		},
+	"/_site/blog/category/tutorials.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/blog/category/tutorials.html",
+		"oF": 0
+		},
 	"/_site/blog/category/updates.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2006,6 +2060,14 @@
 		"oA": 1,
 		"oAP": "/_site/blog/index.html",
 		"oF": 1
+		},
+	"/_site/blog/tutorials/drawing-humans.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/blog/tutorials/drawing-humans.html",
+		"oF": 0
 		},
 	"/_site/blog/updates/announcing-the-brand-new-staceyjenkins.co.uk.html": {
 		"cB": 0,

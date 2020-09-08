@@ -43,6 +43,11 @@
     @media (min-width: 1800px) { 
             @content; }
   }
+    
+      @else if $size == client_header_fix {
+    @media (min-width: 1896px) { 
+            @content; }
+  }
 }
 // -------------------------------------------------- */
 
