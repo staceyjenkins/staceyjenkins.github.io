@@ -1,4 +1,4 @@
-<li class="card_article">
+<li class="post">
                         <div class="post_image">
                         {% include /partials/card_border.html %}
                         <figure class="image_container">
@@ -28,6 +28,7 @@
 {% endcase %}
 {{ post.date | date: "%B, %Y" }}</time></p> 
                     </header>
+                        <div class="post_excerpt">{{post.excerpt}}</div>  
                         <footer class="post_footer">
                         <a class="post_permalink button" href="{{site.url}}{{site.baseurl}}{{post.url}}">Read more</a>
                         </footer>
