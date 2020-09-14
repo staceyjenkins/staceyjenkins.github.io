@@ -908,6 +908,82 @@ ul.socials{
         }
         
     }
+
+.home .portfolio{
+    
+ .card_list {
+            @include gridsupport(){
+     display:grid;
+     width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(405px, 1fr));
+    grid-column-gap:30px;    
+    margin:0;
+    }
+     
+     
+       @include for-size(tablet-portrait-up){
+            @include gridsupport(){
+     display:grid;
+     width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(543px, 1fr));
+    grid-column-gap:30px;  
+    margin:0;
+    }
+    
+}
+     
+             @include for-size(tablet-landscape-up){
+             @include gridsupport(){
+     display:grid;
+     width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+    grid-column-gap:30px;  
+    margin:0;
+    }
+    }
+    }
+    
+.card_article {
+            position:relative;
+            width:100%;
+            margin-bottom:0;
+        
+        @include for-size(tablet-portrait-up){
+            @include gridsupport(){
+            width:100%;
+            }
+             position:relative;
+            width:100%;
+            max-width:100%;
+            
+        }
+        
+         @include for-size(tablet-landscape-up){
+               @include gridsupport(){
+                width:100%;
+            }
+             width:100%;
+             max-width:480px;}
+        
+    }
+    
+    .card {flex-direction:row;}
+    .card_border {display:none !important;}
+    .card_caption {order:1;
+                   width:60%;
+                   position:relative;
+                    overflow:hidden;
+                  }
+    
+    .card_text {position:absolute;
+                top:50%;
+        transform: translateY(-50%);
+        width:100%;
+        padding-right:1rem;}
+    .card_image {width:60%;
+                 overflow:hidden;}
+    
+}
         
 .card_article {
         @include gridsupport(){
@@ -934,7 +1010,7 @@ ul.socials{
             width:50%;
             max-width:313px;}
         
-         @include for-size(desktop-up){
+         @include for-size(tablet-landscape-up){
                @include gridsupport(){
                 width:100%;
             }

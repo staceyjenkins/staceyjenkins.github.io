@@ -38,6 +38,24 @@ pageclass: home
             </div>    
     </div>
     </section>
+
+ <section class="portfolio" id="portfolio">
+            {% include /partials/section_top.html %}
+            <div class="section_content">   
+            <div class="section_wrap" >   
+        <h4 class="work_header">Featured Projects</h4>
+                <p class="work_caption"> Fun digital products (websites, apps and tools) and in-depth branding and communication solutions. </p>
+        <div class="card_row">
+                <ul class="card_list">
+                {% for item in site.workitems %}
+                {% include /partials/workloop.html %}
+                {% endfor %}
+            </ul>
+            </div>
+            </div> 
+        </div>
+            {% include /partials/section_bottom.html %}
+            </section>
     
      <section class="about" id="about">
          <div class="section_wrap">
@@ -82,22 +100,7 @@ pageclass: home
     </section>   
 
 
-    <section class="portfolio" id="portfolio">
-            {% include /partials/section_top.html %}
-            <div class="section_content">   
-            <div class="section_wrap" >   
-        <h4 class="work_header">Featured Work</h4>
-        <div class="card_row">
-                <ul class="card_list">
-                {% for item in site.workitems %}
-                {% include /partials/workloop.html %}
-                {% endfor %}
-            </ul>
-            </div>
-            </div> 
-        </div>
-            {% include /partials/section_bottom.html %}
-            </section>
+   
     
 
    {% include /partials/latestposts.html %}
