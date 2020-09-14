@@ -479,7 +479,7 @@ body.workitem {
 
 
 /* Cards */
-.card_list{
+.card_list, .blogpost_list{
     .card_title {
                  @include setTypeSize('s2');
                  @include setTypeFace('secondary');
@@ -496,7 +496,7 @@ body.workitem {
    
     .card_title a {text-decoration:none;}
     .card_title a, .card_title a:visited {color: colour(blue, 400);}
-
+    .post_time {text-align:left;}
     
     .card_article .card:hover {
         .card_title a {color: colour(blue, 600);}
@@ -660,7 +660,7 @@ li.post {
     .post_time {@include setTypeSize('s0');
                 margin:0;
                 color: colour(charcoal, 500);
-                text-align:center;
+                text-align:left;
         @include for-size(tablet-portrait-up){
             text-align:left;
         }
@@ -702,12 +702,12 @@ aside.sidebar {
 /* notebook posts */
 
 body.home .blog, body.blog, body.blogpost, .relatedposts {
-ul.tags, ul.share_links {
+ul.tags, ul.share_links, .post_header {
     li.heading p {font-weight:700;
                   margin-top:0;
                   margin-bottom:0;
                   margin-right:0.25rem;}
-    li.tag a, li.tag a:visited  {
+    li.tag a, li.tag a:visited, p.tag {
         background-color: colour(blue, 300);
         font-size: .85714286rem;
         display:inline-block;

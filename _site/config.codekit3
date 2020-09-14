@@ -411,6 +411,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/_posts/2020-08-11-the-coffee-shop-fox.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_posts/2020-08-11-the-coffee-shop-fox.html",
+		"oF": 0
+		},
 	"/_posts/2020-08-11-the-coffee-shop-fox.md": {
 		"cB": 0,
 		"cS": 0,
@@ -2069,6 +2077,14 @@
 		"oAP": "/_site/blog/index.html",
 		"oF": 1
 		},
+	"/_site/blog/the-coffee-shop-fox.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/blog/the-coffee-shop-fox.html",
+		"oF": 0
+		},
 	"/_site/blog/tutorials/drawing-humans.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3363,9 +3379,9 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/_site/robots.txt",
-		"oF": 1
+		"oF": 0
 		},
 	"/_site/sitemap.xml": {
 		"cB": 0,

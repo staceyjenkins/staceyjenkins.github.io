@@ -7,6 +7,24 @@
 <div id="loadInstagram" class="instagram_feed">
     <p>Loading Instagram...</p>
 </div>
+    
+<h3>Latest Posts</h3>
+    <ul class="latestposts">
+     {% for post in site.posts limit:3 %}
+     <li>
+    <p><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></p>
+     <p class="post_time"><time datetime="{{post.date}}">{% assign day = post.date | date: "%-d"  %}
+{% case day %}
+  {% when '1' or '21' or '31' %}{{ day }}st
+  {% when '2' or '22' %}{{ day }}nd
+  {% when '3' or '23' %}{{ day }}rd
+  {% else %}{{ day }}th
+{% endcase %}
+{{ post.date | date: "%B, %Y" }}</time></p> 
+     </li>
+    
+    {% endfor %}
+        </ul>
 
 <h3>Categories</h3>              
 <ul class="category">
@@ -22,5 +40,6 @@
   {% endif %}
 {% assign tags_list = nil %}
 </ul>
-                                 
+    
+    
 </aside>

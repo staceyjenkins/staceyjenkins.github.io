@@ -3,7 +3,7 @@ layout: blogpost
 date: 2020-08-11T14:40:00.000+00:00
 tags: illustration
 category: illustration
-excerpt: ''
+excerpt: 
 thumb: assets/img/uploads/khoury_thumb.png
 title: The Coffee Shop Fox
 

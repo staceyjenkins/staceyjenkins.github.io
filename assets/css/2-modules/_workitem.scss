@@ -29,7 +29,7 @@ body.workitem{
     }
     }
     
-    .workitem_heroimage{width:100%;
+    .workitem_heroimage {width:100%;
         @include gridsupport(){
             grid-column:1/-1;
         }

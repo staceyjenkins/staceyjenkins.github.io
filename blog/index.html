@@ -6,12 +6,11 @@ thumb: header/header_top_characters.png
 description: Sketches, design discussions and all round creative stuff from the blog of digital designer and illustrator Stacey Jenkins
 ---
 
-<div class="card_row">
- <ul class="card_list">
+<div class="blog_row">
+ <ul class="blogpost_list">
                     {% for post in paginator.posts %}
-                    <li class="card_article">
-                        <div class="card">
-                         <div class="card_image">
+                    <li class="post">
+                         <div class="post_image">
                         {% include /partials/card_border.html %}
                         <figure class="image_container">
                         <a href="{{site.url}}{{site.baseurl}}{{post.url}}">
@@ -27,8 +26,9 @@ description: Sketches, design discussions and all round creative stuff from the 
                         </a>
                         </figure>
                         </div>    
-                        <div class="card_caption">
+                        <div class="post_caption">
                         <header class="post_header">
+                        <p class="tag">{{post.category | capitalise }}</p>
                         <h3 class="card_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
                         <p class="post_time"><time datetime="{{post.date}}">{% assign day = post.date | date: "%-d"  %}
 {% case day %}
@@ -39,10 +39,10 @@ description: Sketches, design discussions and all round creative stuff from the 
 {% endcase %}
 {{ post.date | date: "%B, %Y" }}</time></p> 
                     </header>
+                        <div class="post_excerpt">{{post.excerpt}}</div>    
                         <footer class="post_footer">
                         <a class="post_permalink button" href="{{site.baseurl}}{{post.url}}">Read more</a>
                         </footer>
-                        </div>
                         </div>
                     </li>
                     {% endfor %}   
