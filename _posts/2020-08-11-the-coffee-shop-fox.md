@@ -3,7 +3,9 @@ layout: blogpost
 date: 2020-08-11T14:40:00.000+00:00
 tags: illustration
 category: illustration
-excerpt: 
+excerpt: Here's a recent painting I completed that I thought I'd share on the blog.
+  This is a personal character of mine named Khoury, that I wanted to show running
+  his very own little coffee shop.
 thumb: assets/img/uploads/khoury_thumb.png
 title: The Coffee Shop Fox
 
