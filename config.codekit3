@@ -1852,28 +1852,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/_site/assets/scripts/app/functions-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/app/functions-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/_site/assets/scripts/app/functions.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/app/functions-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/_site/assets/scripts/app/scripts-min.js": {
 		"bF": 0,
 		"ft": 64,

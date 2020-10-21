@@ -167,56 +167,6 @@ $('a[href*="#"]')
         $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
-          
-    if ($("body").hasClass("khouryindex")){
-        console.log("I should work");
-        var tag = document.createElement('script');
-                      tag.src = "https://www.youtube.com/iframe_api";
-                      var firstScriptTag = document.getElementsByTagName('script')[0];
-                      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                      var player;
-                      function onYouTubeIframeAPIReady() {
-                        player = new YT.Player('player', {
-                            videoId: 'AOTRAlzlIkA',
-                            height: '800',
-                            width: '1200',
-                            playerVars: {
-                              modestbranding: 0,
-                              autoplay: 1,
-                              controls: 0,
-                               showinfo: 0,
-                               wmode: 'transparent',
-                               branding: 0,
-                               rel: 0,
-                               autohide: 1,
-                               origin: window.location.origin
-                            },
-                            events: {
-                                'onReady': onPlayerReady,
-                                'onStateChange': onPlayerStateChange
-                            }
-                          });
-                        }
-                        function onPlayerReady(event) {
-                            event.target.playVideo();
-                        }
-                        function onPlayerStateChange(event) {
-                            var YTP=event.target;
-           if(event.data===1){
-                var remains=YTP.getDuration() - YTP.getCurrentTime();
-                if(this.rewindTO)
-                    clearTimeout(this.rewindTO);
-                this.rewindTO=setTimeout(function(){
-                     YTP.seekTo(0);
-                 },(remains-0.1)*1000);
-             }
-                        }
-        
-        
-    }
-
-
 });
 
 

@@ -1,35 +1,57 @@
 ---
 layout: khoury_index
-title: Taking some time out with Khoury - Stacey Jenkins aka froginajar
+title: Take some time out with Khoury - Stacey Jenkins aka froginajar
 pageclass: khouryindex
-description: Original colour illustrations by Stacey Jenkins aka froginajar
+description: Sometimes, you need a little fox child to help. 
 ---
 <section class="video_wrap">
 <div class="video_row">   
-<div id="player"><p>Loading Khoury video...</p></div>
+<div id="player">
+    <iframe width="1026" height="500" src="http://www.youtube.com/embed/AOTRAlzlIkA?enablejsapi=1" frameborder="0"></iframe></div>
   <br>
-  <p>Music provided by <a href="https://chillhop.com/" target="_blank">Chillhop Music B.V.</a> - Click below to play</p>
+  <p>Click below to play</p>
 <div class="musicplayer">
-  <object width="1056" height="300" class="embed">
-    <param name="movie" 
-           value="http://www.youtube.com/v/7NOSDKb0HlU?hl=en_UK&version=3">
-    </param>
-    <param name="allowFullScreen" 
-           value="true">
-    </param>
-    <param name="allowscriptaccess" 
-           value="always">
-    </param>
-    <embed src="http://www.youtube.com/v/7NOSDKb0HlU?hl=en_US&version=3"
-           type="application/x-shockwave-flash" 
-           width="1200" 
-           height="300" 
-           allowscriptaccess="always" 
-           allowfullscreen="true">
-    </embed>
-  </object>
+    
+    <iframe width="1200" height="315" src="https://www.youtube.com/embed/videoseries?list=PL4VDrrjfJIG9ZAkC1TEHZmOvtqdO3pnrj" frameborder="0"></iframe>
 </div>
 
-<p><small>The following is a simple experiment as a proof of concept and is non-profit. All music played is copyright to 2020 CHILLHOP MUSIC B.V.</small></p>
+<p><small>The following is a simple experiment as a proof of concept and is non-profit. All music played is copyright to the associated artists within the video playlist above.</small></p>
 </div> 
 </section>
+
+<script>        var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '600',
+          width: '1026',
+
+          playerVars: {
+            'controls': 0,           
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+
+          },
+          videoId: 'AOTRAlzlIkA',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+function onPlayerReady(event) {
+        //  event.target.setLoop(true);
+        event.target.playVideo();
+      }
+                        function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
+            player.playVideo(); 
+        }
+    }</script>
