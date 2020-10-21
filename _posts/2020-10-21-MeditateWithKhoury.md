@@ -17,11 +17,11 @@ As part of a little experiment, I animated my lovable fox child Khoury meditatin
 
 <figure class="media">
 
-<div class="embed-container"><iframe src="[https://www.youtube.com/embed/](https://www.youtube.com/embed/0cYal_hitz4 "https://www.youtube.com/embed/0cYal_hitz4")AOTRAlzlIkA" allowfullscreen="" frameborder="0"></iframe></div>
+<div class="embed-container"><iframe src="[https://www.youtube.com/embed/AOTRAlzlIkA](https://www.youtube.com/embed/AOTRAlzlIkA "https://www.youtube.com/embed/AOTRAlzlIkA")" allowfullscreen="" frameborder="0"></iframe></div>
 
 <figcaption>
 
-I animated this little clip of Khoury slowly moving his ears in Procreate, before transferring to Clip Studio Paint to paint each frame. The file was then moved back into Procreate before exporting as a video file. 
+I animated this little clip of Khoury slowly moving his ears in Procreate, before transferring to Clip Studio Paint to paint each frame. The file was then moved back into Procreate before exporting as a video file.
 
 </figcaption>
 
