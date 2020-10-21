@@ -1,12 +1,41 @@
 function loadWaypoints(){
        require(['waypoints'], function(n){ 
+           
            $('.mainarea').waypoint(function(direction){
      setTimeout(function(){
       $('.siteheader').toggleClass('is_sticky', direction=='down');
 }, 100);
 });   
-       });
-    };
+           /*
+ $('.title_grid').waypoint(function(direction){
+      var $this     = $('.title_overlay');
+        if ($this.data('timeout')) {
+         setTimeout(function(){
+            $this.toggleClass('animated ' + $this.data('animation'), direction == 'down');
+          }, parseInt($this.data('timeout')));
+        } else {
+          $this.toggleClass('animated ' + $this.data('animation'),  direction == 'down');
+        }
+       }, {
+     offset: 400
+ });
+           
+ $('.client_row').waypoint(function(direction){
+     $(".client").each(function(i){
+        var $this = $(this);
+        if ($this.data('timeout')){
+         setTimeout(function(){
+            $this.toggleClass('animated ' + $this.data('animation'), direction == 'down');
+          }, parseInt($this.data('timeout')));
+        } else {
+          $this.toggleClass('animated ' + $this.data('animation'),  direction == 'down');
+        }
+     });
+       }, {
+     offset: 400
+ })*/
+    });
+};
 
 // Hotjar Tracking Code for http://www.staceyjenkins.co.uk//
 function loadHotjar(){
@@ -35,7 +64,7 @@ function loadInstagram(){
 });
 }
     
-    function loadDisqus(){
+function loadDisqus(){
         require(['disqusloader'], function(){ 
         disqusLoader( '.disqus', $options );
         });
@@ -56,7 +85,46 @@ function loadGoogle(){
 })
 };
 
+
 require(["jquery", "fontawesome"], function() {
+        /*$(function(){
+    var $window = $(window),
+       win_height_padded = $window.height() * 1.1;
+        
+        
+        $('.animate').addClass('animated');
+        
+        $window.on('scroll', revealOnScroll);
+            
+            
+        function revealOnScroll(){
+    scrolled = $window.scrollTop();
+    $(".play:not(.animated)").each(function () {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+
+      if (scrolled + win_height_padded > offsetTop) {
+        if ($this.data('timeout')) {
+          window.setTimeout(function(){
+            $this.addClass('animated ' + $this.data('animation'));
+          }, parseInt($this.data('timeout'),10));
+        } else {
+          $this.addClass('animated ' + $this.data('animation'));
+        }
+      }
+    });
+            
+            // Hide animations when completed
+   $(".play.animated").each(function (index) {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+      if (scrolled + win_height_padded < offsetTop) {
+        $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+      }
+    });  
+    }      
+    
+});*/
     $(document).ready(function() {
         
         // Select all links with hashes
@@ -99,6 +167,56 @@ $('a[href*="#"]')
         $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
+          
+    if ($("body").hasClass("khouryindex")){
+        console.log("I should work");
+        var tag = document.createElement('script');
+                      tag.src = "https://www.youtube.com/iframe_api";
+                      var firstScriptTag = document.getElementsByTagName('script')[0];
+                      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                      var player;
+                      function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                            videoId: 'AOTRAlzlIkA',
+                            height: '800',
+                            width: '1200',
+                            playerVars: {
+                              modestbranding: 0,
+                              autoplay: 1,
+                              controls: 0,
+                               showinfo: 0,
+                               wmode: 'transparent',
+                               branding: 0,
+                               rel: 0,
+                               autohide: 1,
+                               origin: window.location.origin
+                            },
+                            events: {
+                                'onReady': onPlayerReady,
+                                'onStateChange': onPlayerStateChange
+                            }
+                          });
+                        }
+                        function onPlayerReady(event) {
+                            event.target.playVideo();
+                        }
+                        function onPlayerStateChange(event) {
+                            var YTP=event.target;
+           if(event.data===1){
+                var remains=YTP.getDuration() - YTP.getCurrentTime();
+                if(this.rewindTO)
+                    clearTimeout(this.rewindTO);
+                this.rewindTO=setTimeout(function(){
+                     YTP.seekTo(0);
+                 },(remains-0.1)*1000);
+             }
+                        }
+        
+        
+    }
+
+
 });
 
 

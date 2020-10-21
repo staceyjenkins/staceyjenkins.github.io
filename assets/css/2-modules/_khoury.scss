@@ -1,0 +1,45 @@
+body.khouryindex {
+
+    p {display:inline-block;
+       margin:0 auto;}
+    
+    .logomark {
+        fill: colour(teal, 500);
+    }
+    
+    .video_row{
+width: 75%;
+margin: 0 auto;
+    }
+    
+    #player {
+        background: colour(charcoal, 100);
+        width:100%;
+        max-width:1056px;
+        min-height:300px;
+        display:block;
+        position:relative;
+        overflow:hidden;
+        margin:0 auto;
+    }
+    
+.musicplayer {
+  position:relative;
+  width:100%;
+  height:25px;
+  overflow:hidden;
+  text-align:center;
+  margin: rhythm(4) 0;
+  
+  .embed {position:relative;
+        top:-276px;
+        left:-5px;}
+}
+    
+    .copyright {padding-bottom: rhythm(4);}
+    .copyright p {color: colour(charcoal, 700);
+                  text-align:center;
+                  }   
+    
+}
+

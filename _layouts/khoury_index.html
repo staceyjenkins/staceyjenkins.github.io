@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+{% include _head.html %}
+    <body class="{{page.pageclass}}">
+    <main class="site">   
+    <div class="sitecontent">
+    <div class="sitelayout">    
+  {% include _khoury_header.html %}
+        <div class="mainarea">
+        {{ content }}
+        </div>
+    </div>
+    </div>    
+    <footer class="site_footer">
+    <div class="section_wrap">
+    <div class="footer_grid">
+    <div class="copyright">
+       <p><small>All content unless otherwise stated is (c) 2016-2020 Stacey 'froginajar' Jenkins
+           <br><a href="{{site.url}}{{site.baseurl}}/privacypolicy/" title="Privacy Policy">Privacy Policy</a></small></p>
+      </div>
+    </div>
+    </div>    
+    </footer>    
+        </main>
+</body>
+     {% include /partials/requirescripts.html %}   
+    
+</html>

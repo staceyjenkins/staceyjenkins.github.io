@@ -1130,6 +1130,100 @@ body.blogpost {
     }
 }
 
+/*ILLUSTRATION FEED*/
+section.illustration{
+    .illustration_row {
+    width: 75%;
+        margin: 0 auto;}
+    
+    .grid_wrap{
+        
+    @include gridsupport(){
+    display:grid;
+
+        
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-column-gap:30px;        
+    grid-auto-rows: 1fr;
+    margin:0;
+    }
+        list-style:none;
+        display:inline-flex;
+        justify-content: stretch;
+        flex-flow:column wrap;
+        width:calc(100% + #{$gutter});
+        margin:0 -$gutter/2;
+        position:relative;
+        
+        @include for-size(tablet-portrait-up){
+            flex-flow:row wrap;
+            align-items: start;
+        }
+}
+    
+    .home_instagram_feed .instagram_gallery {
+    @include gridsupport(){
+     display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:30px;        
+    grid-auto-rows: 1fr;
+    margin:0;
+    width:100%;
+    }
+        list-style:none;
+        display:inline-flex;
+        flex-flow:row wrap;
+        width:calc(100% + 30px);
+        margin:0 -15px;
+        position:relative;
+    
+    @include for-size(tablet-portrait-up){
+                grid-template-columns: repeat(3, 1fr);
+        }
+           @include for-size(tablet-landscape-up){
+               grid-template-columns: repeat(3, 1fr);
+        }
+    
+    
+    a { 
+        @include gridsupport(){
+            width:100%;
+            padding:0;
+        }
+        
+        display: inline-block;
+        margin: 0;
+        text-align: left;
+        vertical-align: top;
+        padding: 0 15px;
+        background:white;
+        width: 33%;
+        @include boxshadows();
+
+        @include for-size(tablet-portrait-up){
+             @include gridsupport(){
+            width:100%;
+        }
+            width:25%;
+        }
+           @include for-size(tablet-landscape-up){
+                @include gridsupport(){
+            width:100%;
+            padding:0;
+        }
+            width:16.6666667%;
+        }
+    
+    }
+    
+    a img {
+        max-width:100%;
+        max-height:100%;
+        display:block;
+    }
+    
+}
+    }
 
 
 

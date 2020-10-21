@@ -136,6 +136,14 @@
 		"oAP": "/_data/clients.yml",
 		"oF": 0
 		},
+	"/_data/illustrations.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_data/illustrations.yml",
+		"oF": 0
+		},
 	"/_data/navigation.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -182,6 +190,14 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_includes/_heroarea.html",
+		"oF": 0
+		},
+	"/_includes/_khoury_header.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_includes/_khoury_header.html",
 		"oF": 0
 		},
 	"/_includes/_tracking.html": {
@@ -360,6 +376,22 @@
 		"oAP": "/_layouts/default.html",
 		"oF": 0
 		},
+	"/_layouts/illustration.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_layouts/illustration.html",
+		"oF": 0
+		},
+	"/_layouts/khoury_index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_layouts/khoury_index.html",
+		"oF": 0
+		},
 	"/_layouts/textpage.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -410,14 +442,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/_posts/2020-08-11-the-coffee-shop-fox.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_posts/2020-08-11-the-coffee-shop-fox.html",
-		"oF": 0
 		},
 	"/_posts/2020-08-11-the-coffee-shop-fox.md": {
 		"cB": 0,
@@ -1861,28 +1885,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/_site/assets/scripts/config-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/config-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"/_site/assets/scripts/config.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/scripts/config-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/_site/assets/scripts/lib/disqusloader-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2077,14 +2079,6 @@
 		"oAP": "/_site/blog/index.html",
 		"oF": 1
 		},
-	"/_site/blog/the-coffee-shop-fox.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_site/blog/the-coffee-shop-fox.html",
-		"oF": 0
-		},
 	"/_site/blog/tutorials/drawing-humans.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2133,6 +2127,91 @@
 		"oAP": "/_site/feed.xml",
 		"oF": 1
 		},
+	"/_site/illustration/gallery/80sPoP.png": {
+		"ft": 32768,
+		"iS": 825680,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/80sPoP.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/askecrest_colour.png": {
+		"ft": 32768,
+		"iS": 659536,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/askecrest_colour.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/coffee_shop_fox.png": {
+		"ft": 32768,
+		"iS": 1311741,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/coffee_shop_fox.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/Khoury_ankh_colour.png": {
+		"ft": 32768,
+		"iS": 577137,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/Khoury_ankh_colour.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/little_mysteries.png": {
+		"ft": 32768,
+		"iS": 1174710,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/little_mysteries.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/morlas_water.png": {
+		"ft": 32768,
+		"iS": 747099,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/morlas_water.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/gallery/website_banner.png": {
+		"ft": 32768,
+		"iS": 494206,
+		"oA": 0,
+		"oAP": "/_site/illustration/gallery/website_banner.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_site/illustration/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/illustration/index.html",
+		"oF": 0
+		},
 	"/_site/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2140,6 +2219,14 @@
 		"oA": 1,
 		"oAP": "/_site/index.html",
 		"oF": 1
+		},
+	"/_site/khoury/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_site/khoury/index.html",
+		"oF": 0
 		},
 	"/_site/OLD/css/styles.css": {
 		"aP": 1,
@@ -3670,6 +3757,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/2-modules/_home.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/css/2-modules/_illustration.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/2-modules/_illustration.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 1
+		},
+	"/assets/css/2-modules/_khoury.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/2-modules/_khoury.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 1
@@ -5281,12 +5394,105 @@
 		"oAP": "/Gemfile.lock",
 		"oF": 0
 		},
+	"/illustration/gallery/80sPoP.png": {
+		"ft": 32768,
+		"iS": 825680,
+		"oA": 0,
+		"oAP": "/illustration/gallery/80sPoP.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/askecrest_colour.png": {
+		"ft": 32768,
+		"iS": 659536,
+		"oA": 0,
+		"oAP": "/illustration/gallery/askecrest_colour.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/coffee_shop_fox.png": {
+		"ft": 32768,
+		"iS": 1311741,
+		"oA": 0,
+		"oAP": "/illustration/gallery/coffee_shop_fox.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/Khoury_ankh_colour.png": {
+		"ft": 32768,
+		"iS": 577137,
+		"oA": 0,
+		"oAP": "/illustration/gallery/Khoury_ankh_colour.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/little_mysteries.png": {
+		"ft": 32768,
+		"iS": 1174710,
+		"oA": 0,
+		"oAP": "/illustration/gallery/little_mysteries.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/morlas_water.png": {
+		"ft": 32768,
+		"iS": 747099,
+		"oA": 0,
+		"oAP": "/illustration/gallery/morlas_water.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/gallery/website_banner.png": {
+		"ft": 32768,
+		"iS": 494206,
+		"oA": 0,
+		"oAP": "/illustration/gallery/website_banner.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/illustration/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/illustration/index.html",
+		"oF": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.html",
+		"oF": 0
+		},
+	"/khoury/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/khoury/index.html",
 		"oF": 0
 		},
 	"/OLD/css/styles.css": {
