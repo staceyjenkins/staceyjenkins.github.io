@@ -17,7 +17,7 @@ As part of a little experiment, I animated my lovable fox child Khoury meditatin
 
 <figure class="media">
 
-<div class="embed-container"><iframe src="[https://www.youtube.com/embed/AOTRAlzlIkA](https://www.youtube.com/embed/AOTRAlzlIkA "https://www.youtube.com/embed/AOTRAlzlIkA")" allowfullscreen="" frameborder="0"></iframe></div>
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/AOTRAlzlIkA" allowfullscreen="" frameborder="0"></iframe></div>
 
 <figcaption>
 
