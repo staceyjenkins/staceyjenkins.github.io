@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+{% include _head.html %}
+    <body class="{{page.pageclass}}">
+         <main class="site">   
+        <div class="siteWrapper">
+        <div class="row">
+        <aside class="sidebar">
+   <p>Illustration site</p>
+    {% include /partials/socials.html %}
+    </aside>
+<div class="appWrapper">
+    <div class="app_innerwrapper">
+    <div class="body_content">
+        <div class="row">
+        {{ content }}
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        </main>
+</body>
+</html>

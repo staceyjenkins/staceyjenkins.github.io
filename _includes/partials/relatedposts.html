@@ -27,11 +27,11 @@
                     <div class="card">
                     <div class="card_caption">
                         <div class="card_text">
-                        <h5 class="card_title">
+                        <h4 class="card_title">
                         <a href="{{site.url}}/{{site.baseurl}}/{{post.url}}">
                         {{post.title}}
                         </a>    
-                        </h5>
+                        </h4>
                         <p class="post_time"><time datetime="{{post.date}}">{% assign day = post.date | date: "%-d"  %}
 {% case day %}
   {% when '1' or '21' or '31' %}{{ day }}st

@@ -1,92 +1,120 @@
 body.illo_home {
-        $column-gap: 2.5rem;
-        $sidebar-width: 350px;
-        
     
-    .illustration_grid {
-        height:auto;
-        padding: 0 1.25rem; 
-        @include gridsupport(){
-   
-        }
-        @include for-size(tablet-portrait-up){
-        @include gridsupport(){
-        height:100%;
-        display:grid;
-        grid-template-columns: #{$sidebar-width} 1fr;
-        grid-column-gap: #{$column-gap};               
-        grid-template-rows:auto;
-        margin:0;
-        padding: 0 1.25rem; 
-        justify-content:stretch;
-        width:100%;
-    }
+    main.site {overflow:auto !important;}
     
-    display:inline-flex;
-    overflow:hidden;
+    $sidebar-width: 400px;
+
+@mixin padding() {
+  padding: 0 15px;
+}
+
+.siteWrapper {
     position:relative;
-    align-items:center;
-    flex-flow:row nowrap;
+    display:block;
+    @include padding;
+    
+ @include for-size(tablet-landscape-up){  
+  width: 100%;
+  margin:0 auto;
+  display:flex;
+  flex-direction:row;
+  height:100%;
+  min-height:100vh;
+  margin-top: rhythm(4);
+}
+    }
+
+.row {
+    @include for-size(tablet-landscape-up){
+  margin: 0 -15px;
+    }
+}
+
+.sidebar {
+    display: block;
     width:100%;
-    height:100%;
-    padding:0;
+    @include for-size(tablet-landscape-up){
+  width:$sidebar-width;
+  min-height:100vh;
+  max-width:400px;
+  position:fixed;
+  @include padding;
+}
     }
-    }
-    
-    .sidebar, .gallery {
-        padding:0;
-        position:relative;
-        @include for-size(tablet-portrait-up){
-        @include gridsupport(){
-        padding:0 !important;
-        }
-        padding: 0 calc(#{$column-gap}/2);
-        }
-        }
-    
-    .sidebar {
+
+.appWrapper {
+    width:100%;
+    position:relative;
+    @include for-size(tablet-landscape-up){
+   display:block;
+  width: calc(100% - #{$sidebar-width});
+  flex:1;
+  height:100%;
+  min-height:100vh;
+  position:absolute;
+  top:0;
+  left: $sidebar-width;
+  right:0;
+  bottom:0;
+}
+  
+  .app_innerwrapper {
         width:100%;
-        @include for-size(tablet-portrait-up){
-            @include gridsupport(){
-                width:100%;
-            }
-        width: #{$sidebar-width};    
-        }
+    position:relative;
+      @include for-size(tablet-landscape-up){
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    align-items: stretch;
+  }
     }
+  
+  .body_content {
+    width:100%;
+    position:relative;
+    margin-bottom:rhythm(4);
+      @include for-size(tablet-landscape-up){
+     @include padding;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+       min-height: 100vh;
+      }
+  }
+  
+}
     
-    .gallery {
-        @include for-size(tablet-portrait-up){
-            @include gridsupport(){
-                width:100%;
-            }
-            flex:1;
-        }
-    }
-    
-    .gallery ul.masonry_grid {
-        display:flex;
-        position:relative;
-        overflow:hidden;
-        flex-wrap:wrap;
-        
-        li {
-        flex:1 0 auto;
-        width:auto;
-        margin: 0 1.25rem 1.25rem 0;
-        background-color: colour(charcoal,300);
-    }
-        
-        li figure {
-            width:100%;
-            max-width:500px;
-        overflow:hidden;
-        position:relative;
-        }
-        
-        li figure img {object-fit:cover;
-        height:auto;
+figure img {
+        object-fit:cover;
+        height:100%;
         width:100%;
-        }
+    }    
+    
+
+.grid {
+min-height:100vh;
+max-width:1200px;
+display:flex;
+flex-direction:column;
+flex-wrap:wrap;
+    @include for-size(tablet-portrait-up){
+        flex-direction:row;
+    }
+  
+ .grid-col {flex:1;
+ &.grid-col-2, &.grid-col-3 {display:none !important;}
+     @include for-size(tablet-portrait-up){
+         &.grid-col-2 {display:block !important;}
+     }
+          @include for-size(tablet-landscape-up){
+         &.grid-col-3 {display:block !important;}
+     }
+    }
+    
+.grid-item {padding:rhythm(2) 15px;}
 }
     
 }

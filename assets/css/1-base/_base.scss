@@ -293,9 +293,9 @@ section {
         }
     &.portfolio {
 
-        .section_top svg, .section_bottom svg {fill:colour(teal, 300);}
+        .section_top svg, .section_bottom svg {fill: lighten(colour(teal, 100), 20%);}
         .section_content { padding: 1.75rem 0;
-            background: colour(teal, 300);}
+            background: lighten(colour(teal, 100), 20%);}
     }
     &.about {
         .about_row {     
@@ -732,18 +732,17 @@ margin:0;
             grid-column: 1 /-1;
             grid-row:1;
             }
-            order:0;
             
             @include for-size(tablet-landscape-up){
                 @include gridsupport(){
-                grid-column:6/9;
+                grid-column:1/-1;
             grid-row:1; 
         }
-                order:1;
             }
         }
         
         .copyright {
+            text-align:center;
                      @include gridsupport(){
             grid-row:2;
             grid-column: 1 /-1;
@@ -753,11 +752,10 @@ margin:0;
                order:1;
                         @include for-size(tablet-landscape-up){
                          @include gridsupport(){
-            grid-column:1/6;
-            grid-row:1;        
+            grid-column:1/-1;
+            grid-row:2;        
             }
-                    padding-top:0;        
-                order:0;
+                     padding-top:rhythm(4);       
             }
         }
         
@@ -1028,6 +1026,9 @@ ul.socials{
         transition: all .2s ease-in-out;
         
             &:hover {transform:scale(1.1);}
+            &:hover a.button {background: colour(teal, 300);
+        transform: scale(1.1);
+        box-shadow: 0px 2px 15px -1px transparentize(colour(charcoal, 900), 0.43);}
 
             a:focus {text-decoration:underline;}
             

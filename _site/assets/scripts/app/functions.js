@@ -49,7 +49,6 @@ function loadHotjar(){
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 }
 
-
 function loadInstagram(){
     require(['instagramfeed'], function(n){ 
 	  $.instagramFeed({
@@ -70,20 +69,17 @@ function loadDisqus(){
         });
     };
 
-function loadClicky(){
-    require(['clicky'], function(n){
-    var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(100869051);
-})
-};
-
-function loadGoogle(){
-    require(['google'], function(n){
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-176845358-1');
-})
-};
+function loadColcade(){
+    
+        if ($("body").hasClass("illo_home")) {
+          require(["jquery","colcade"], function() {
+              $('.grid').colcade({
+                columns: '.grid-col',
+                items: '.grid-item'
+                });
+});          
+    };
+        };
 
 
 require(["jquery", "fontawesome"], function() {
@@ -164,7 +160,7 @@ $('a[href*="#"]')
     }
   });
         
-        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar()];
+        $siteFunctions = [loadWaypoints(), /*loadDisqus()*/, loadInstagram(), loadHotjar(), loadColcade()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
 });
