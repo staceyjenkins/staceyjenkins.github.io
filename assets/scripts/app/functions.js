@@ -160,7 +160,7 @@ $('a[href*="#"]')
     }
   });
         
-        $siteFunctions = [loadWaypoints(), /*loadDisqus()*/, loadInstagram(), loadHotjar(), loadColcade()];
+        $siteFunctions = [loadWaypoints(), loadDisqus(), loadInstagram(), loadHotjar(), loadColcade()];
         for (var n = 0; n < $siteFunctions.length; n++) setTimeout($siteFunctions[n], 4e3);
     });
 });
