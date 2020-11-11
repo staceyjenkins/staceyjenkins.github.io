@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl:'http://localhost:4000/assets/scripts',
+    baseUrl:'http://www.staceyjenkins.co.uk/assets/scripts',
     paths:{
         disqusloader:'lib/disqusloader-min',
         jquery: '//code.jquery.com/jquery-3.5.1.min',
